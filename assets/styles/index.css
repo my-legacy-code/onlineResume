@@ -1,0 +1,263 @@
+html {
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+@media only screen
+and (max-device-width: 1023px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    header nav {
+        display: none;
+    }
+
+    #logo {
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    #biography-pane > .center {
+        flex-direction: column;
+    }
+
+    #biography-profile-container {
+        text-align: center;
+    }
+
+    #biography-intro-container {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+
+    #biography-who-i-am {
+        font-size: 24px;
+    }
+
+    #biography-skills-container {
+        font-size: 16px;
+    }
+}
+
+@media only screen
+and (min-device-width: 1024px) {
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 1024px;
+    }
+
+    #logo {
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 8px 0 0 0;
+    }
+
+    header nav {
+        flex: 1;
+        margin-left: 40px;
+    }
+
+    header .center {
+        display: flex;
+    }
+
+    #biography-intro-container {
+        padding: 40px 0 0 80px;
+    }
+
+    #biography-who-i-am {
+        font-size: 40px;
+    }
+
+    #biography-skills-container {
+        font-size: 20px;
+    }
+}
+
+#logo {
+    font-size: 25px;
+    color: white;
+}
+
+header nav > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    height: 44px;
+    overflow: hidden;
+}
+
+header nav > ul > li {
+    margin-top: -44px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 600ms cubic-bezier(1, 0, 0, 1);
+    flex: 1;
+}
+
+header nav > ul > li > div:first-child {
+    font-size: 0;
+    padding: 12px 0;
+}
+
+header nav > ul > li > div:first-child > i {
+    font-size: 20px;
+}
+
+header nav > ul > li > div:last-child {
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+header nav > ul > li:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 0;
+}
+
+header nav > ul > li.active {
+    font-weight: 500;
+    color: white;
+}
+
+#main-content {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#biography-pane {
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    /*background-color: #FFD600;*/
+    background: url("../images/bg.jpg") center;
+    background-size: cover;
+}
+
+#biography-pane > .center {
+    padding: 104px 0 60px 0;
+    display: flex;
+}
+
+#biography-intro-container {
+    flex: 1;
+    word-spacing: 5px;
+}
+
+#biography-profile {
+    width: 300px;
+    border: 8px solid white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+#biography-profile:hover {
+    cursor: pointer;
+    transform: scale(1.005);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#biography-who-i-am {
+}
+
+#biography-who-i-am .role {
+    font-weight: bold;
+}
+
+#biography-skills-container {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+}
+
+#biography-skills-container a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#biography-skills-container a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    padding-left: 0;
+    margin-top: 28px;
+    list-style: none;
+    display: flex;
+    font-size: 60px;
+}
+
+.social-media > li:not(:last-child) {
+    margin-right: 60px;
+}
+
+#contact-pane {
+    color: white;
+    background-color: #37474F;
+}
+
+#contact-pane ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#contact-pane li {
+    padding: 20px 0;
+}
+
+#contact-pane li:not(:last-child) {
+    margin-right: 30px;
+}
+
+#copyright-pane {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    background-color: #263238;
+}
+
+#education-pane {
+    margin: 0 auto;
+    padding: 60px;
+}
+
+#education-pane > ul, #experiences-pane > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#education-pane > ul img, #experiences-pane > ul img{
+    width: 80px;
+}
+
+#education-pane > ul > li:not(:last-child), #experiences-pane > ul > li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.school-info, .company-info {
+    display: flex;
+}
+
+.school-logo, .company-logo {
+    margin-right: 20px;
+}
