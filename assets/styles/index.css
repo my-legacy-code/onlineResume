@@ -94,6 +94,10 @@ and (min-device-width: 1024px) {
     color: white;
 }
 
+ul {
+    list-style: none;
+}
+
 header nav > ul {
     margin: 0;
     padding: 0;
@@ -187,6 +191,7 @@ header nav > ul > li.active {
 
 a {
     color: inherit;
+    font-weight: bolder;
 }
 
 #biography-skills-container a {
@@ -212,6 +217,7 @@ a {
 
 #contact-pane {
     color: white;
+    margin-top: 40px;
     background-color: #37474F;
 }
 
