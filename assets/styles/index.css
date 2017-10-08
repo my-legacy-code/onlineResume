@@ -98,7 +98,7 @@ ul {
     list-style: none;
 }
 
-header nav > ul {
+header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -107,7 +107,7 @@ header nav > ul {
     overflow: hidden;
 }
 
-header nav > ul > li {
+header nav ul li {
     margin-top: -44px;
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
@@ -115,27 +115,31 @@ header nav > ul > li {
     flex: 1;
 }
 
-header nav > ul > li > div:first-child {
+header nav ul li a {
+    text-decoration: none;
+}
+
+header nav ul li div:first-child {
     font-size: 0;
     padding: 12px 0;
 }
 
-header nav > ul > li > div:first-child > i {
+header nav ul li div:first-child > i {
     font-size: 20px;
 }
 
-header nav > ul > li > div:last-child {
+header nav ul li div:last-child {
     padding: 14px 0;
     font-size: 14px;
 }
 
-header nav > ul > li:hover {
+header nav ul li:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.85);
     margin-top: 0;
 }
 
-header nav > ul > li.active {
+header nav ul li.active {
     font-weight: 500;
     color: white;
 }
@@ -221,7 +225,7 @@ a {
     background-color: #37474F;
 }
 
-#contact-pane ul{
+#contact-pane ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -252,11 +256,11 @@ a {
     padding-left: 0;
 }
 
-#education-pane > ul img, #experiences-pane > ul img{
+#education-pane > ul img, #experiences-pane > ul img {
     width: 80px;
 }
 
-#education-pane > ul > li:not(:last-child), #experiences-pane > ul > li:not(:last-child){
+#education-pane > ul > li:not(:last-child), #experiences-pane > ul > li:not(:last-child) {
     margin-bottom: 20px;
 }
 
