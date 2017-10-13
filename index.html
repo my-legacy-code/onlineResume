@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/styles/font-awesome.min.css">
     <link rel="stylesheet" href="assets/styles/font-mfizz.css">
     <link rel="stylesheet" href="assets/styles/index.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/scripts/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -64,7 +66,7 @@
                             <i class="material-icons">extension</i>
                         </div>
                         <div>
-                            Hackathon
+                            Hackathons
                         </div>
                     </a>
                 </li>
@@ -74,7 +76,7 @@
                             <i class="material-icons">bookmark</i>
                         </div>
                         <div>
-                            Favorite book
+                            Favorite books
                         </div>
                     </a>
                 </li>
@@ -149,32 +151,66 @@
                     <img src="assets/images/schools/wpi.png">
                 </div>
                 <div>
-                    <div>Worcester Polytechnic Institute, Worcester, MA</div>
+                    <div><span class="important">Worcester Polytechnic Institute</span>, Worcester, MA</div>
                     <div>Bachelor of Science in Computer Science, GPA 3.5/4.0</div>
-                    <div>AUG 2014 - MAY 2018</div>
+                    <div class="date">AUG 2014 - MAY 2018</div>
                     <ul>
-                        <li>Algorithms</li>
+                        <li class="course">Algorithms</li>
                         <li>
-                            <div>Webware: Computation Technology for Information System</div>
-                            <ul>
+                            <div class="course">Webware: Computation Technology for Information System</div>
+                            <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/MovieSearch">MovieSearch</a>
+                                    <div class="project-thumbnail">
+                                        <img src="assets/images/screenshots/movie-search/1.png">
+                                    </div>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/MovieSearch">MovieSearch</a>
+                                    </div>
+                                    <div class="project-description">
+                                        Online movie information lookup website
+                                    </div>
+                                    <div class="project-implementation">
+                                        Developed a backend framework in <a>Node.js</a> supporting <a>ORM</a>,
+                                        designed <a>responsive layouts</a> and implemented <a>material design</a>.
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/byliuyang/Posts">Posts</a>
+                                    <div class="project-thumbnail">
+                                        <img src="assets/images/screenshots/posts/1.png">
+                                    </div>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/Posts">Posts</a>
+                                    </div>
+                                    <div class="project-description">
+                                        Real-time anonymous chat room
+                                    </div>
+                                    <div class="project-implementation">
+                                        Implemented <a>session</a> mechanism with <a>Cookie</a>,
+                                        designed <a>configurable routers</a> and integrated <a>Web Socket</a>.
+                                    </div>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <div>Operating Systems</div>
-                            <ul>
+                            <div class="course">Operating Systems</div>
+                            <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/virusCounter">virusCounter</a>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/virusCounter">virusCounter</a>
+                                    </div>
+                                    <div class="project-description">
+                                        Active virus detector
+                                    </div>
+                                    <div class="project-implementation">
+                                        Designed a <a>loadable kernel module</a> in <a>C</a>,
+                                        intercepted <a>system calls</a> and monitored <a>open, read, and write</a>
+                                        operations.
+                                    </div>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <div>Tools & Techniques in Computer Network Security</div>
+                            <div class="course">Tools & Techniques in Computer Network Security</div>
                             <ul>
                                 <li>
                                     <a href="https://github.com/byliuyang/SuperSDN">SuperSDN</a>
@@ -182,60 +218,95 @@
                             </ul>
                         </li>
                         <li>
-                            <div>Software Engineering</div>
-                            <ul>
+                            <div class="course">Software Engineering</div>
+                            <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/mySixwild">mySixwild</a>
+                                    <div class="project-thumbnail">
+                                        <img src="assets/images/screenshots/sixwild/1.png">
+                                    </div>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/mySixwild">mySixwild</a>
+                                    </div>
+                                    <div class="project-description">
+                                        Candy crush like single player desktop game
+                                    </div>
+                                    <!--<div class="project-implementation">-->
+                                    <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
+                                    <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
+                                    <!--</div>-->
                                 </li>
                             </ul>
                         </li>
-                        <li>Intro to Machine Organization & Assembly Language</li>
-                        <li>Database Systems</li>
+                        <li class="course">Intro to Machine Organization & Assembly Language</li>
+                        <li class="course">Database Systems</li>
                         <li>
-                            <div>Computer Networks</div>
-                            <ul>
+                            <div class="course">Computer Networks</div>
+                            <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/harryHttpd">harryHttpd</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div>Intro to Artificial Intelligence</div>
-                            <ul>
-                                <li>
-                                    <a href="https://github.com/byliuyang/connect-n-ai">Connect N AI</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Programming Languages</li>
-                        <li>Computer Graphics</li>
-                        <li>Analysis of Algorithms</li>
-                        <li>
-                            <div>Object-oriented Analysis & Design</div>
-                            <ul>
-                                <li>
-                                    <a href="https://github.com/byliuyang/xiangqi">Chinese Chess</a>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/harryHttpd">harryHttpd</a>
+                                    </div>
+                                    <div class="project-description">
+                                        Maltreated HTTP server
+                                    </div>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <div>Advanced Computer Networks</div>
-                            <ul>
+                            <div class="course">Intro to Artificial Intelligence</div>
+                            <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/netGuard">netGuard</a>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/connect-n-ai">Connect N AI</a>
+                                    </div>
+                                    <div class="project-description">
+                                        N in a line game AI
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="course">Programming Languages</li>
+                        <li class="course">Computer Graphics</li>
+                        <li class="course">Analysis of Algorithms</li>
+                        <li>
+                            <div class="course">Object-oriented Analysis & Design</div>
+                            <ul class="projects">
+                                <li>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/xiangqi">Chinese Chess</a>
+                                    </div>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <div>Computer Vision *</div>
-                            <ul>
+                            <div class="course">Advanced Computer Networks</div>
+                            <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/cVision">cVision</a>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/netGuard">netGuard</a>
+                                    </div>
                                 </li>
                             </ul>
                         </li>
-                        <li>Mobile & Ubiquitous Computing *</li>
-                        <li>Machine Learning *</li>
+                        <li>
+                            <div class="course">Computer Vision *</div>
+                            <ul class="projects">
+                                <li>
+                                    <div class="project-thumbnail">
+                                        <img src="assets/images/screenshots/c-vision/1.jpg">
+                                    </div>
+                                    <div class="project-title">
+                                        <a href="https://github.com/byliuyang/cVision">cVision</a>
+                                    </div>
+                                    <!--<div class="project-implementation">-->
+                                    <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
+                                    <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
+                                    <!--</div>-->
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="course">Mobile & Ubiquitous Computing *</li>
+                        <li class="course">Machine Learning *</li>
                     </ul>
                 </div>
             </li>
@@ -244,9 +315,48 @@
                     <img src="assets/images/schools/bnds.png">
                 </div>
                 <div>
-                    <div>Beijing National Day School, Beijing, China</div>
+                    <div><span class="important">Beijing National Day School</span>, Beijing, China</div>
                     <div>Advanced Placement Program</div>
-                    <div>Sept 2010 - MAY 2014</div>
+                    <div class="date">Sept 2010 - MAY 2014</div>
+
+                    <ul class="projects">
+                        <li>
+                            <div class="project-thumbnail">
+                                <img src="assets/images/screenshots/wbihs/1.png">
+                            </div>
+                            <div class="project-title">
+                                <a href="#">Weifang Beihai International High School Website</a>
+                            </div>
+                            <!--<div class="project-implementation">-->
+                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
+                            <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
+                            <!--</div>-->
+                        </li>
+                        <li>
+                            <div class="project-thumbnail">
+                                <img src="assets/images/screenshots/us-flag/1.jpg">
+                            </div>
+                            <div class="project-title">
+                                <a href="#">Pure Java US Flag</a>
+                            </div>
+                            <!--<div class="project-implementation">-->
+                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
+                            <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
+                            <!--</div>-->
+                        </li>
+                        <li>
+                            <div class="project-thumbnail-mobile">
+                                <img src="assets/images/screenshots/hplane/1.jpg">
+                            </div>
+                            <div class="project-title">
+                                <a href="#">hplane</a>
+                            </div>
+                            <!--<div class="project-implementation">-->
+                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
+                            <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
+                            <!--</div>-->
+                        </li>
+                    </ul>
                 </div>
             </li>
         </ul>
@@ -259,12 +369,13 @@
                     <img src="assets/images/companies/wpi.png">
                 </div>
                 <div>
-                    <div>Student Assistant</div>
-                    <div>Worcester Polytechnic Institute</div>
-                    <div>Sep 2017 - Present 2 months</div>
-                    <div>Worcester, MA, US</div>
-                    <div>
-                        Explained selection sort, merge sort, abstract classes and inheritance to non-computer science
+                    <div><span class="important">Student Assistant, Worcester Polytechnic Institute</span>, Worcester,
+                        MA, US
+                    </div>
+                    <div class="date">Sep 2017 - Present 2 months</div>
+                    <div class="description">
+                        Explained <a>selection sort</a>, <a>merge sort</a>, <a>abstract classes</a> and
+                        <a>inheritance</a> to non-computer science
                         students.
                     </div>
                 </div>
@@ -274,17 +385,23 @@
                     <img src="assets/images/companies/wpi.png">
                 </div>
                 <div>
-                    <div>Web Frontend Developer</div>
-                    <div>Worcester Polytechnic Institute</div>
-                    <div>Mar 2017 – Present 8 months</div>
-                    <div>Worcester, MA, US</div>
-                    <div>
-                        Developed search component in ES6, tracked issues with Gitlab and deployed code to Amazon S3,
-                        allowing students to find books online.
+                    <div><span class="important">Web Frontend Developer, Worcester Polytechnic Institute</span>,
+                        Worcester, MA, US
                     </div>
-                    <ul>
+                    <div class="date">Mar 2017 – Present 8 months</div>
+                    <ul class="projects">
                         <li>
-                            <a href="https://www.wpi.edu/library">WPI Library Search</a>
+                            <div class="project-thumbnail">
+                                <img src="assets/images/screenshots/wpi-library/1.png">
+                            </div>
+                            <div class="project-title">
+                                <a href="https://www.wpi.edu/library">WPI Library Search</a>
+                            </div>
+                            <div class="project-implementation">
+                                Developed search component in <a>ES6</a>, tracked issues with <a>Gitlab</a> and deployed
+                                code to
+                                <a>Amazon S3</a>, allowing students to find books online.
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -294,18 +411,28 @@
                     <img src="assets/images/companies/assistments.png">
                 </div>
                 <div>
-                    <div>iOS Developer</div>
-                    <div>ASSISTments Lab</div>
-                    <div>Sep 2016 – Present 1 yr 2 months</div>
-                    <div>Worcester, MA, US</div>
-                    <div>
-                        Mocked RESTful APIs in RAML, built a testing framework for Java Spring and reduced loading time
-                        from 15 seconds to less than 1 second.
+                    <div><span class="important">iOS Developer, ASSISTments Lab</span>, Worcester, MA, US</div>
+                    <div class="date">Sep 2016 – Present 1 yr 2 months</div>
+                    <div class="description">
+                        Mocked <a>RESTful</a> APIs in <a>RAML</a>, built a testing framework for <a>Java Spring</a> and
+                        reduced loading time
+                        from <a>15</a> seconds to less than <a>1</a> second.
                         <br/>
-                        Redesigned UI of iOS with Sketch and refactored iOS app with design patterns.
+                        Redesigned UI of iOS with <a>Sketch</a> and refactored iOS app with <a>design patterns</a>.
                     </div>
-                    <ul>
-                        <li><a href="assets/documents/assistments.pdf">ASSISTments iOS App</a></li>
+                    <ul class="projects">
+                        <li>
+                            <div class="project-thumbnail-mobile">
+                                <img src="assets/images/screenshots/assistments/1.png">
+                            </div>
+                            <div class="project-title">
+                                <a href="assets/documents/assistments.pdf">ASSISTments iOS App</a>
+                            </div>
+                            <!--<div class="project-implementation">-->
+                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
+                            <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
+                            <!--</div>-->
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -314,15 +441,16 @@
                     <img src="assets/images/companies/wpi.png">
                 </div>
                 <div>
-                    <div>Summer Camp Teaching Assistant</div>
-                    <div>Worcester Polytechnic Institute</div>
-                    <div>Aug 2017 – Aug 2017 1 months</div>
-                    <div>Worcester, MA, US</div>
-                    <div>
-                        Helped high school students grab CSS and javascript concepts, such as events handling, JSON
-                        parsing, AJAX, DOM manipulation, CORS.
+                    <div><span class="important">Summer Camp Teaching Assistant, Worcester Polytechnic Institute</span>,
+                        Worcester, MA, US
+                    </div>
+                    <div class="date">Aug 2017 – Aug 2017 1 months</div>
+                    <div class="description">
+                        Helped high school students grab <a>CSS</a> and javascript concepts, such as <a>events
+                        handling</a>, <a>JSON</a>
+                        parsing, <a>AJAX</a>, <a>DOM manipulation</a>, <a>CORS</a>.
                         <br/>
-                        Offered student tutorials on building their real-time chat sites with Socket.io and SentGrid
+                        Offered student tutorials on building their real-time chat sites with <a>Socket.io</a> and <a>SentGrid</a>
                         API.
                     </div>
                 </div>
@@ -332,18 +460,26 @@
                     <img src="assets/images/companies/concordya.jpg">
                 </div>
                 <div>
-                    <div>UI Designer</div>
-                    <div>Concordya Inc 有序科技</div>
-                    <div>May 2015 – Aug 2015 4 months</div>
-                    <div>Beijing, China</div>
-                    <div>
-                        Redesign UI for existing financial system with Sketch and implement company home page with CSS3.
+                    <div><span class="important">UI Designer, Concordya Inc. 有序科技</span>, Beijing, China</div>
+                    <div class="date">May 2015 – Aug 2015 4 months</div>
+                    <div class="description">
+                        Redesign UI for existing financial system with <a>Sketch</a> and implement company home page with <a>CSS3</a>.
                         <br/>
-                        Work with the startup founders to improve the UI of the product.
+                        Work with the startup founders to improve the <a>UI</a> of the product.
                     </div>
-                    <ul>
+                    <ul class="projects">
                         <li>
-                            <a href="http://byliuyang.github.io/guanplushomepage">Guan Plus Home Page</a>
+                            <div class="project-thumbnail">
+                                <img src="assets/images/screenshots/guan-plus-homepage/1.png">
+                            </div>
+                            <div class="project-title">
+                                <a href="http://byliuyang.github.io/guanplushomepage">Guan Plus Home Page</a>
+                            </div>
+                            <!--<div class="project-implementation">-->
+                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed-->
+                            <!--<a>responsive-->
+                            <!--layouts</a> and implemented <a>material design</a>.-->
+                            <!--</div>-->
                         </li>
                     </ul>
                 </div>
@@ -363,16 +499,61 @@
     </li>
     <li id="projects-pane" class="center">
         <h1>Projects</h1>
-        <ul>
+        <ul class="projects">
             <li>
-                <a href="https://github.com/byliuyang/HeroDeploy">HeroDeploy</a>
+                <div class="project-thumbnail">
+                    <img src="assets/images/screenshots/hero-deploy/1.png">
+                </div>
+                <div class="project-title">
+                    <a href="https://github.com/byliuyang/HeroDeploy">HeroDeploy</a>
+                </div>
+                <div class="project-description">
+                    Automatic deployment git hook for private server
+                </div>
+                <div class="project-implementation">
+                    Designed a <a>git hook</a> for <a>Angular</a> and <a>Ruby on Rails</a> projects and integrated <a>Procfile</a>
+                    and <a>systemd</a> services,
+                    easing project deployment.
+                </div>
             </li>
             <li>
-                <a href="https://cover-main.herokuapp.com/">Cover</a>
+                <div class="project-thumbnail">
+                    <img src="assets/images/screenshots/cover/1.png">
+                </div>
+                <div class="project-title">
+                    <a href="https://cover-main.herokuapp.com/">Cover</a>
+                </div>
+                <!--<div class="project-implementation">-->
+                <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
+                <!--layouts</a> and implemented <a>material design</a>.-->
+                <!--</div>-->
             </li>
-            <li><a href="https://github.com/byliuyang/wehackers-design">Wehackers</a></li>
             <li>
-                <a href="https://github.com/byliuyang/captcha-breaker">Captcha Breaker</a>
+                <div class="project-thumbnail">
+                    <img src="assets/images/screenshots/wehackers/1.png">
+                </div>
+                <div class="project-title">
+                    <a href="https://github.com/byliuyang/wehackers-design">Wehackers</a>
+                </div>
+                <!--<div class="project-implementation">-->
+                <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
+                <!--layouts</a> and implemented <a>material design</a>.-->
+                <!--</div>-->
+            </li>
+            <li>
+                <div class="project-thumbnail">
+                    <img src="assets/images/screenshots/captcha/1.png">
+                </div>
+                <div class="project-title">
+                    <a href="https://github.com/byliuyang/captcha-breaker">Captcha Breaker</a>
+                </div>
+                <div class="project-description">
+                    Recognizing four characters in CAPTCHA
+                </div>
+                <div class="project-implementation">
+                    Removed noise with <a>OpenCV</a>, split characters into separate images in <a>Python</a> and
+                    recognized individual characters using <a>convolutional neural network</a> with <a>90%</a> accuracy.
+                </div>
             </li>
             <li>
                 <a href="https://github.com/byliuyang/machine_learning">Machine Learning Algorithms</a>
@@ -383,34 +564,91 @@
         <h1>Hackathons</h1>
         <ul>
             <li>
-                <div>HACK@WPI</div>
-                <ul>
+                <div class="hackathon-logo">
+                    <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/challenge_photos/000/458/549/datas/full_width.png">
+                </div>
+                <div class="hackathon-title">HACK@WPI</div>
+                <div class="date">JAN 14, 2017 - JAN 15, 2017</div>
+                <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/knockt-com">Knockt</a>
+                        <div class="project-thumbnail">
+                            <img src="assets/images/screenshots/knockt/1.png">
+                        </div>
+                        <div class="project-title">
+                            <a href="https://devpost.com/software/knockt-com">Knockt</a>
+                        </div>
+                        <div class="project-description">
+                            Virtual doorbell system
+                        </div>
+                        <div class="project-implementation">
+                            Implemented an <a>iOS</a> app, a <a>Web</a> app, an <a>Android</a> app via <a>Firebase</a>
+                            APIs, <a>Javascript Promises</a>,
+                            <a>React</a>, and <a>Google OAuth</a> API, set up <a>Webpack</a> hot reloading and deployed
+                            web app to <a>AWS</a> in <a>a team of 5</a>.
+                        </div>
                     </li>
                 </ul>
             </li>
             <li>
-                <div>HACK@BROWN</div>
-                <ul>
+                <div class="hackathon-logo">
+                    <img src="http://blogdailyherald.com/wp-content/uploads/2015/02/Hack@Brown-Logo.png">
+                </div>
+                <div class="hackathon-title">HACK@BROWN</div>
+                <div class="date">FEB 6, 2017 - FEB 7, 2017</div>
+                <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/code-etch">CodeEtch</a>
+                        <div class="project-thumbnail">
+                            <img src="assets/images/screenshots/code-etch/1.png">
+                        </div>
+                        <div class="project-title">
+                            <a href="https://devpost.com/software/code-etch">CodeEtch</a>
+                        </div>
+                        <!--<div class="project-implementation">-->
+                        <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
+                        <!--layouts</a> and implemented <a>material design</a>.-->
+                        <!--</div>-->
                     </li>
                 </ul>
             </li>
             <li>
-                <div>HackMIT</div>
-                <ul>
+                <div class="hackathon-logo">
+                    <img src="https://hackmit.org/assets/images/hack-logo/hack_logo_glow.png">
+                </div>
+                <div class="hackathon-title">HackMIT</div>
+                <div class="date">SEP 16, 2017 - SEP 17, 2017</div>
+                <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/elevate-85svgy">Elevate</a>
+                        <div class="project-thumbnail">
+                            <img src="assets/images/screenshots/elevate/1.png">
+                        </div>
+                        <div class="project-title">
+                            <a href="https://devpost.com/software/elevate-85svgy">Elevate</a>
+                        </div>
+                        <!--<div class="project-implementation">-->
+                        <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
+                        <!--layouts</a> and implemented <a>material design</a>.-->
+                        <!--</div>-->
                     </li>
                 </ul>
             </li>
             <li>
-                <div>AngelHack</div>
-                <ul>
+                <div class="hackathon-logo">
+                    <img src="http://angelhack.com/wp-content/uploads/2016/02/AngelHack.png">
+                </div>
+                <div class="hackathon-title">AngelHack</div>
+                <div class="date">JUN 17, 2017 - JUN 18, 2017</div>
+                <ul class="projects">
                     <li>
-                        <a href="https://github.com/ftlc/WeighIn">WeighIn</a>
+                        <div class="project-thumbnail">
+                            <img src="assets/images/screenshots/weight-in/1.png">
+                        </div>
+                        <div class="project-title">
+                            <a href="https://github.com/ftlc/WeighIn">WeighIn</a>
+                        </div>
+                        <!--<div class="project-implementation">-->
+                        <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
+                        <!--layouts</a> and implemented <a>material design</a>.-->
+                        <!--</div>-->
                     </li>
                 </ul>
             </li>
@@ -418,42 +656,106 @@
     </li>
     <li id="favorite-boos-pane" class="center">
         <h1>Favorite books</h1>
-        <ul>
+        <ul class="books">
             <li>
-                <a href="http://eloquentjavascript.net">Eloquent Javascript</a>
+                <div class="book">
+                    <img src="http://eloquentjavascript.net/img/cover.png">
+                </div>
+                <div>
+                    <a href="http://eloquentjavascript.net">Eloquent Javascript</a>
+                </div>
             </li>
             <li>
-                <a href="https://survivejs.com/webpack">SurviveJs: Webpack</a>
+                <div class="book">
+                    <img src="https://survivejs.com/8f86c1d07d5536454690030cd1a10b53.png">
+                </div>
+                <div>
+                    <a href="https://survivejs.com/webpack">SurviveJs: Webpack</a>
+                </div>
             </li>
             <li>
-                <a href="https://survivejs.com/react">SurviveJs: React</a>
+                <div class="book">
+                    <img src="https://survivejs.com/b61671d95f81496495f2587a10ddb122.png">
+                </div>
+                <div>
+                    <a href="https://survivejs.com/react">SurviveJs: React</a>
+                </div>
             </li>
             <li>
-                <a href="https://www.ng-book.com/2">ng-book 2</a>
+                <div class="book">
+                    <img src="assets/images/book-covers/ng-book.jpg">
+                </div>
+                <div>
+                    <a href="https://www.ng-book.com/2">ng-book 2</a>
+                </div>
             </li>
             <li>
-                <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">The introduction to Reactive Programming
-                    you've been missing</a>
+                <div class="book">
+                    <img src="assets/images/book-covers/fullstack-react.jpg">
+                </div>
+                <div>
+                    <a href="https://www.fullstackreact.com">Fullstack React</a>
+                </div>
             </li>
             <li>
-                <a href="https://www.amazon.com/Undisturbed-REST-Guide-Designing-Perfect/dp/1329115945">Undistributed
-                    REST</a>
+                <div class="book">
+                    <img src="https://camo.githubusercontent.com/995c301de2f566db10748042a5a67cc5d9ac45d9/687474703a2f2f692e696d6775722e636f6d2f484d47574e4f352e706e67">
+                </div>
+                <div>
+                    <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">The introduction to Reactive
+                        Programming
+                        you've been missing</a>
+                </div>
             </li>
             <li>
-                <a href="https://www.railstutorial.org/book">Ruby on Rails Tutorial</a>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51pKgaZR15L._SX379_BO1,204,203,200_.jpg">
+                </div>
+                <div>
+                    <a href="https://www.amazon.com/Undisturbed-REST-Guide-Designing-Perfect/dp/1329115945">Undistributed
+                        REST</a>
+                </div>
             </li>
             <li>
-                <a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a>
+                <div class="book">
+                    <img src="https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_4th_edition/images/cover-web.png">
+                </div>
+                <div>
+                    <a href="https://www.railstutorial.org/book">Ruby on Rails Tutorial</a>
+                </div>
             </li>
             <li>
-                <a href="http://algs4.cs.princeton.edu/home">Algorithms</a>
+                <div class="book">
+                    <img src="assets/images/book-covers/you-dont-know-js.jpg">
+                </div>
+                <div>
+                    <a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a>
+                </div>
             </li>
             <li>
-                <a href="https://cs.brown.edu/courses/cs173/2012/book">Programming Languages: Application and
-                    Interpretation</a>
+                <div class="book">
+                    <img src="http://algs4.cs.princeton.edu/cover.png">
+                </div>
+                <div>
+                    <a href="http://algs4.cs.princeton.edu/home">Algorithms</a>
+                </div>
             </li>
             <li>
-                <a href="http://csapp.cs.cmu.edu/">Computer System: A programmer's perspective</a>
+                <div class="book">
+                    <img src="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/cover.jpg">
+                </div>
+                <div>
+                    <a href="https://cs.brown.edu/courses/cs173/2012/book">Programming Languages: Application and
+                        Interpretation</a>
+                </div>
+            </li>
+            <li>
+                <div class="book">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41AoUQujOCL._SX387_BO1,204,203,200_.jpg">
+                </div>
+                <div>
+                    <a href="http://csapp.cs.cmu.edu/">Computer System: A programmer's perspective</a>
+                </div>
             </li>
         </ul>
     </li>

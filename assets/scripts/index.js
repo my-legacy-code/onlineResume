@@ -12,4 +12,16 @@ window.addEventListener('load', () => {
         });
     });
     switchTo(tabEls[0]);
+
+    document.querySelectorAll('a').forEach(aEl => {
+        if (aEl.href.indexOf(`${window.location.href}#`) !== -1)
+            aEl.addEventListener('click', event => {
+                event.preventDefault();
+                let idIndex = aEl.href.indexOf('#');
+                let id = aEl.href.substr(idIndex);
+                $('html').animate({
+                    scrollTop: $(id).offset().top
+                }, 1000);
+            });
+    });
 });
