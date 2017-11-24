@@ -24,4 +24,21 @@ window.addEventListener('load', () => {
                 }, 1000);
             });
     });
+
+    document.querySelectorAll('.photo-gallery').forEach(photoEl => {
+        let active = false;
+        photoEl.firstChild.nextSibling.addEventListener('click', event => {
+            if(!active)
+                $(photoEl).addClass('shown');
+            else
+                $(photoEl).removeClass('shown');
+            active = !active;
+        });
+    });
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-108153620-1');
 });

@@ -66,7 +66,7 @@ and (min-device-width : 1024px) {
         margin-left  : auto;
         margin-right : auto;
 
-        padding      : 8px 0 0 0;
+        padding      : 4px 0 0 0;
     }
 
     header nav {
@@ -249,7 +249,10 @@ a {
 
 #education-pane {
     margin  : 0 auto;
-    padding : 60px;
+}
+
+#experiences-pane {
+    padding-top: 60px;
 }
 
 #education-pane > ul, #experiences-pane > ul {
@@ -269,7 +272,7 @@ a {
     display : flex;
 }
 
-#education-pane > ul, #experiences-pane > ul, #hackathons-pane > ul {
+#education-pane > ul, #experiences-pane > ul, #activities-pane > ul {
     margin-left : -100px;
 }
 
@@ -283,19 +286,19 @@ a {
     margin-bottom : 20px;
 }
 
-.school-logo, .company-logo, .hackathon-logo {
+.school-logo, .company-logo, .activity-logo {
     margin-right : 20px;
 }
 
-#hackathons-pane > ul {
+#activities-pane > ul {
     padding-left : 0;
 }
 
-.hackathon-logo {
+.activity-logo {
     float : left;
 }
 
-.school-logo > img, .company-logo > img, .hackathon-logo > img {
+.school-logo > img, .company-logo > img, .activity-logo > img {
     width : 80px;
 }
 
@@ -307,7 +310,7 @@ a {
 
 .projects > li {
     width      : 40%;
-    margin-top : 20px;
+    margin-top : 50px;
 }
 
 .projects > li:nth-child(odd) {
@@ -324,17 +327,23 @@ a {
 }
 
 .project-thumbnail, .project-thumbnail-mobile {
+    position: relative;
     background-color : white;
-    box-shadow       : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition       : all 0.3s cubic-bezier(.25, .8, .25, 1);
     margin-bottom    : 20px;
-    font-size: 0;
+    width            : 100%;
+    font-size        : 0;
+    box-shadow : 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 .project-thumbnail {
-    display          : flex;
-    overflow         : hidden;
-    align-items      : center;
+    display     : flex;
+    overflow    : hidden;
+    align-items : center;
+}
+
+.project-thumbnail.show-top {
+    align-items: baseline;
 }
 
 .project-thumbnail {
@@ -354,7 +363,7 @@ a {
 
 .project-thumbnail:hover {
     transform  : scale(1.05);
-    cursor     : pointer;
+    cursor : pointer;
     box-shadow : 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -368,15 +377,27 @@ a {
     width  : 100%;
 }
 
+.project-winner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/winner.svg");
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+}
+
 .project-title {
     text-align : center;
 }
 
 .project-description {
-    color: black;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    color         : black;
+    text-align    : center;
+    font-size     : 0.9rem;
+    margin-bottom : 10px;
 }
 
 .project-implementation {
@@ -416,7 +437,7 @@ a {
 }
 
 .book:hover {
-    cursor: pointer;
+    cursor    : pointer;
     transform : perspective(100px) rotateY(-3deg);
 }
 
@@ -460,22 +481,95 @@ a {
 }
 
 .course {
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
+    font-size   : 14px;
+    font-weight : bold;
+    color       : black;
 }
 
-#hackathons-pane > ul > li {
-    margin-bottom: 20px;
+#activities-pane > ul > li {
+    margin-bottom : 20px;
+    min-height: 80px;
 }
 
-.hackathon-title {
-    font-size: 16px;
-    font-weight: bold;
+.activity-title {
+    font-size   : 16px;
+    font-weight : bold;
 }
 
-#achievements-pane ul{
-    padding-left: 0;
-    font-weight: bold;
-    font-size: 16px;
+#achievements-pane ul {
+    padding-left : 0;
+    font-weight  : bold;
+    font-size    : 16px;
+}
+
+.photo-gallery {
+    perspective   : 500px;
+    padding-left  : 0;
+    position      : relative;
+    height        : 210px;
+    margin-bottom : 20px;
+}
+
+.photo-gallery > li {
+    position         : absolute;
+    background-color : white;
+}
+
+.photo-gallery > li:nth-child(1) {
+    z-index : 4;
+    transition : all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.photo-gallery > li:nth-child(2) {
+    transform  : scale(0.99);
+    z-index : 3;
+    transition : all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.photo-gallery > li:nth-child(3) {
+    transform  : scale(0.99);
+    transition : all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+    z-index : 2;
+}
+
+.photo-gallery > li:nth-child(4) {
+    transform  : scale(0.99);
+    transition : all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+    z-index : 1;
+}
+
+.photo-gallery:not(.shown) > li:first-child {
+    box-shadow : 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.photo-gallery.shown > li {
+    box-shadow : 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.photo-gallery.shown > li:nth-child(1) {
+    transform  : scale(0.95) rotateX(-8deg);
+}
+
+.photo-gallery.shown > li:nth-child(2) {
+    transform  : scale(0.9) translateY(-25px) rotateX(-6deg);
+}
+
+.photo-gallery.shown > li:nth-child(2):hover {
+    transform : scale(0.9) translateY(-25px) translateX(80px) rotateX(-6deg);
+}
+
+.photo-gallery.shown > li:nth-child(3) {
+    transform  : scale(0.85) translateY(-50px) rotateX(-4deg);
+}
+
+.photo-gallery.shown > li:nth-child(3):hover {
+    transform : scale(0.85) translateY(-50px) translateX(80px) rotateX(-4deg);
+}
+
+.photo-gallery.shown > li:nth-child(4) {
+    transform  : scale(0.8) translateY(-75px) rotateX(-2deg);
+}
+
+.photo-gallery.shown > li:nth-child(4):hover {
+    transform : scale(0.8) translateY(-75px) translateX(80px) rotateX(-2deg);
 }
