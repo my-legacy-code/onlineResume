@@ -29,7 +29,10 @@ and (-webkit-min-device-pixel-ratio : 2) {
         overflow   : hidden;
         transition : all 600ms cubic-bezier(1, 0, 0, 1);
         height     : 0;
+    }
 
+    header nav ul li:hover {
+        background-color : rgba(0, 0, 0, 0.4);
     }
 
     header nav ul li a {
