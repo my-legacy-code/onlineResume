@@ -270,8 +270,8 @@ header nav ul li div:first-child > i {
 }
 
 header nav ul li div:last-child {
-    padding   : 14px 0;
-    font-size : 14px;
+    padding   : 13px 0;
+    font-size : 12px;
 }
 
 header nav ul li:hover {
