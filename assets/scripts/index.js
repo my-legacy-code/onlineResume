@@ -1,4 +1,19 @@
 window.addEventListener('load', () => {
+    let menuBtn = document.querySelector('#menu-btn');
+    let navEl = document.querySelector('#header nav');
+    let menuEl = document.querySelector('#header nav > ul');
+    let menuShown = false;
+    menuBtn.addEventListener('click', event =>{
+        if (menuShown) {
+            $(navEl).css('height', 0);
+            menuBtn.textContent = 'menu';
+        } else {
+            $(navEl).css('height', $(menuEl).height());
+            menuBtn.textContent = 'close';
+        }
+        menuShown = !menuShown;
+    });
+
     let tabEls = Array.from(document.querySelectorAll('header nav > ul > li'));
 
     function switchTo(tabEl) {

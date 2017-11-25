@@ -20,21 +20,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<header>
+<header id="header">
     <div class="center">
         <div id="logo">Yang Liu</div>
         <nav>
             <ul>
-                <li>
-                    <a href="#experiences-pane">
-                        <div>
-                            <i class="material-icons">work</i>
-                        </div>
-                        <div>
-                            Experiences
-                        </div>
-                    </a>
-                </li>
                 <li>
                     <a href="#achievements-pane">
                         <div>
@@ -42,6 +32,16 @@
                         </div>
                         <div>
                             Achievements
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experiences-pane">
+                        <div>
+                            <i class="material-icons">work</i>
+                        </div>
+                        <div>
+                            Experiences
                         </div>
                     </a>
                 </li>
@@ -95,6 +95,7 @@
                 </li>
             </ul>
         </nav>
+        <i class="material-icons menu" id="menu-btn">menu</i>
     </div>
 </header>
 <ul id="main-content">
@@ -148,6 +149,18 @@
             </div>
         </div>
     </li>
+    <li id="achievements-pane" class="center">
+        <h1>Achievements</h1>
+        <ul>
+            <li>1st Place, BostonHacks, 2017</li>
+            <li>
+                Top 1% puzzle solvers, HackMIT, 2017
+            </li>
+            <li>
+                1st Place, HACK@WPI, 2016
+            </li>
+        </ul>
+    </li>
     <li id="experiences-pane" class="center">
         <h1>Experiences</h1>
         <ul>
@@ -156,7 +169,8 @@
                     <img src="assets/images/companies/wpi.png">
                 </div>
                 <div>
-                    <div><span class="important">Full-stack Web Developer, Intern, Worcester Polytechnic Institute</span>,
+                    <div><span
+                            class="important">Full-stack Web Developer, Intern, Worcester Polytechnic Institute</span>,
                         Worcester, MA, US
                     </div>
                     <div class="date">MARCH 2017 – PRESENT</div>
@@ -221,7 +235,8 @@
                             <div class="project-title">
                                 <a href="assets/documents/assistments.pdf">ASSISTments iOS App</a>
                             </div>
-                            <div class="project-description">iOS app & Java backend for intellectual tutoring system</div>
+                            <div class="project-description">iOS app & Java backend for intellectual tutoring system
+                            </div>
                             <!--<div class="project-implementation">-->
                             <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
                             <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
@@ -244,6 +259,7 @@
                         box</a>, <a>scope</a>,
                         <a>events handling</a>, <a>JSON</a> parsing, <a>AJAX</a>, <a>DOM manipulation</a>, <a>CORS</a>.
                         <br/>
+                        <br/>
                         Provided student tutorials on building their real-time chat sites with <a>Socket.io</a> and on
                         sending email using <a>SentGrid</a> API.
                     </div>
@@ -258,6 +274,7 @@
                     <div class="date">MAY 2015 – AUGUST 2015</div>
                     <div class="description">
                         Designed homepage <a>animations</a>, <a>material UI</a>, <a>icons</a> and <a>logos</a> with <a>Sketch</a>.
+                        <br/>
                         <br/>
                         Created <a>interactive prototypes</a> with <a>Framer.js</a>, <a>jQuery</a> and <a>CSS3</a>.
                     </div>
@@ -278,18 +295,6 @@
                         </li>
                     </ul>
                 </div>
-            </li>
-        </ul>
-    </li>
-    <li id="achievements-pane" class="center">
-        <h1>Achievements</h1>
-        <ul>
-            <li>1st Place, BostonHacks, 2017</li>
-            <li>
-                Top 1% puzzle solvers, HackMIT, 2017
-            </li>
-            <li>
-                1st Place, HACK@WPI, 2016
             </li>
         </ul>
     </li>
@@ -501,7 +506,8 @@
                 </div>
                 <div class="activity-title">Computer Security Club</div>
                 <div class="date">SEPTEMBER, 2017 - PRESENT</div>
-                <div class="description">Participated <a>Capture the Flag</a> security compilation with club members</div>
+                <div class="description">Participated <a>Capture the Flag</a> security compilation with club members
+                </div>
             </li>
         </ul>
     </li>
@@ -925,16 +931,20 @@
             </li>
         </ul>
     </li>
-    <li id="contact-pane">
-        <ul class="center">
-            <li>Worcester, MA 01609</li>
-            <li>(508) 373-3494</li>
-            <li>byliuyang11@gmail.com</li>
-        </ul>
-    </li>
-    <li id="copyright-pane">
-        Designed by Yang Liu
-    </li>
 </ul>
+<footer>
+    <ul>
+        <li id="contact-pane">
+            <ul class="center">
+                <li>Worcester, MA 01609</li>
+                <li>(508) 373-3494</li>
+                <li>byliuyang11@gmail.com</li>
+            </ul>
+        </li>
+        <li id="copyright-pane">
+            Designed by Yang Liu
+        </li>
+    </ul>
+</footer>
 </body>
 </html>
