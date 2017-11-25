@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
                 event.preventDefault();
                 let idIndex = aEl.href.indexOf('#');
                 let id = aEl.href.substr(idIndex);
-                $('html').animate({
+                $('html body').animate({
                     scrollTop: $(id).offset().top
                 }, 1000);
             });
