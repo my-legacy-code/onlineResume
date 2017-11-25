@@ -293,7 +293,7 @@ header nav ul li.active {
 #biography-pane {
     color           : white;
     text-shadow     : 0 0 10px rgba(0, 0, 0, 0.8);
-    background      : url("../images/bg2.jpg") center;
+    background      : url("../images/bg.jpg") center;
     background-size : cover;
 }
 
