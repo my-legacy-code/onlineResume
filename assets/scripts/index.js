@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
     let navEl = document.querySelector('#header nav');
     let menuEl = document.querySelector('#header nav > ul');
     let menuShown = false;
+
     menuBtn.addEventListener('click', event =>{
         if (menuShown) {
             $(navEl).css('height', 0);
@@ -12,6 +13,14 @@ window.addEventListener('load', () => {
             menuBtn.textContent = 'close';
         }
         menuShown = !menuShown;
+    });
+
+    let closeMessageBtn = document.querySelector('#close-message-btn');
+    let topFlashMessage = document.querySelector('#top-flash-message');
+    let body = document.body;
+    closeMessageBtn.addEventListener('click', event => {
+        $(body).removeClass('show-message');
+        $(topFlashMessage).addClass('hide');
     });
 
     let tabEls = Array.from(document.querySelectorAll('header nav > ul > li'));
