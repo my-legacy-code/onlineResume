@@ -32,7 +32,7 @@ and (-webkit-min-device-pixel-ratio : 2) {
     }
 
     header nav ul li:hover {
-        background-color : rgba(0, 0, 0, 0.4);
+        background-color : rgba(0, 0, 0, 0.2);
     }
 
     header nav ul li a {
