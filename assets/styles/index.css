@@ -8,6 +8,10 @@ body {
     line-height : 1.5;
 }
 
+body.show-message #main-content {
+    margin-top : 44px;
+}
+
 body.show-message header {
     top : 44px;
 }
@@ -138,6 +142,10 @@ and (-webkit-min-device-pixel-ratio : 2) {
     .books > li {
         width : 100%;
     }
+
+    #biography-pane > .center {
+        padding : 148px 0 60px 0;
+    }
 }
 
 @media only screen
@@ -265,6 +273,10 @@ and (min-device-width : 1024px) {
     .activity-title {
         margin-left : 100px;
     }
+
+    #biography-pane > .center {
+        padding : 104px 0 60px 0;
+    }
 }
 
 #logo {
@@ -325,6 +337,7 @@ header nav ul li.active {
     margin           : 0;
     list-style       : none;
     background-color : white;
+    transition       : all 600ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 #biography-pane {
@@ -335,7 +348,6 @@ header nav ul li.active {
 }
 
 #biography-pane > .center {
-    padding : 104px 0 60px 0;
     display : flex;
 }
 
