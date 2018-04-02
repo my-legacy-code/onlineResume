@@ -418,9 +418,11 @@ a {
 }
 
 #contact-pane {
-    color            : white;
+    border-top :1px solid #e6e6e6;
+    padding : 60px 0 0 0;
+    font-size: 14px;
+    color            : #555555;
     margin-top       : 40px;
-    background-color : #37474F;
 }
 
 #contact-pane ul {
@@ -430,19 +432,15 @@ a {
     justify-content : center;
 }
 
-#contact-pane li {
-    padding : 20px 0;
-}
-
 #contact-pane li:not(:last-child) {
     margin-right : 30px;
 }
 
 #copyright-pane {
+    font-size: 14px;
     text-align       : center;
-    padding          : 10px 0;
-    color            : white;
-    background-color : #263238;
+    padding          : 10px 0 60px 0;
+    color            : #555555;
 }
 
 #education-pane {
