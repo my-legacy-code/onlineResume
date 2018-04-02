@@ -23,75 +23,59 @@
     <meta name="author" content="Yang Liu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="show-message">
-<div class="flash-message" id="top-flash-message">
-    <div class="container">
-        I built this site from SCRATCH.
-        <i class="material-icons" id="close-message-btn">close</i>
-    </div>
-</div>
+<body>
 <header id="header">
     <div class="center">
         <div id="logo">Yang Liu</div>
         <nav>
             <ul>
-                <li>
-                    <a href="#experiences-pane">
-                        <div>
-                            <i class="material-icons">work</i>
-                        </div>
-                        <div>
-                            Experiences
-                        </div>
-                    </a>
+                <li data-pane-id="experiences-pane">
+                    <div>
+                        <i class="material-icons">work</i>
+                    </div>
+                    <div>
+                        Experiences
+                    </div>
                 </li>
-                <li>
-                    <a href="#projects-pane">
-                        <div>
-                            <i class="material-icons">build</i>
-                        </div>
-                        <div>
-                            Projects
-                        </div>
-                    </a>
+                <li data-pane-id="projects-pane">
+                    <div>
+                        <i class="material-icons">build</i>
+                    </div>
+                    <div>
+                        Projects
+                    </div>
                 </li>
-                <li>
-                    <a href="#activities-pane">
-                        <div>
-                            <i class="material-icons">extension</i>
-                        </div>
-                        <div>
-                            Activities
-                        </div>
-                    </a>
+                <li data-pane-id="activities-pane">
+                    <div>
+                        <i class="material-icons">extension</i>
+                    </div>
+                    <div>
+                        Activities
+                    </div>
                 </li>
-                <li>
-                    <a href="#education-pane">
-                        <div>
-                            <i class="material-icons">school</i>
-                        </div>
-                        <div>
-                            Education
-                        </div>
-                    </a>
+                <li data-pane-id="certificate-pane">
+                    <div>
+                        <i class="material-icons">grade</i>
+                    </div>
+                    <div>
+                        Certificates
+                    </div>
                 </li>
-                <li>
-                    <a href="#favorite-boos-pane">
-                        <div>
-                            <i class="material-icons">bookmark</i>
-                        </div>
-                        <div>
-                            Favorite books
-                        </div>
-                    </a>
+                <li data-pane-id="education-pane">
+                    <div>
+                        <i class="material-icons">school</i>
+                    </div>
+                    <div>
+                        Education
+                    </div>
                 </li>
-                <li>
-                    <a href="#contact-pane">
-                        <div>
-                            <i class="material-icons">phone</i>
-                        </div>
-                        <div>Contact</div>
-                    </a>
+                <li data-pane-id="favorite-books-pane">
+                    <div>
+                        <i class="material-icons">bookmark</i>
+                    </div>
+                    <div>
+                        Favorite books
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -165,7 +149,13 @@
             </li>
         </ul>
     </li>
-    <li id="experiences-pane" class="center">
+</ul>
+
+<div id="pane-wrapper">
+</div>
+
+<ul id="hidden-panes">
+    <li id="experiences-pane" class="center active-pane">
         <h1>Experiences</h1>
         <ul>
             <li class="company-info">
@@ -178,26 +168,6 @@
                         Mountain View, CA, US
                     </div>
                     <div class="date">JUNE 2018 – PRESENT</div>
-                    <!--<ul class="projects">-->
-                        <!--<li>-->
-                            <!--<a href="https://www.wpi.edu/library">-->
-                                <!--<div class="project-thumbnail">-->
-                                    <!--<img src="assets/images/screenshots/wpi-library/1.png">-->
-                                <!--</div>-->
-                            <!--</a>-->
-                            <!--<div class="project-title">-->
-                                <!--<a href="https://www.wpi.edu/library">Library Search</a>-->
-                            <!--</div>-->
-                            <!--<div class="project-description">Search component for school library</div>-->
-                            <!--<div class="project-implementation">-->
-                                <!--Developed <a>progressive</a> search component in <a>ES6</a>,-->
-                                <!--fixed <a>XSS</a> vulnerability by validating inputs with <a>regular expression</a> in-->
-                                <!--<a>PHP</a>,-->
-                                <!--tracked issues with <a>Gitlab</a> and deployed code to <a>Amazon S3</a>, allowing-->
-                                <!--students to find books online.-->
-                            <!--</div>-->
-                        <!--</li>-->
-                    <!--</ul>-->
                 </div>
             </li>
             <li class="company-info">
@@ -212,13 +182,13 @@
                     <div class="date">MARCH 2017 – MARCH 2018</div>
                     <ul class="projects">
                         <li>
-                            <a href="https://www.wpi.edu/library">
+                            <a href="https://www.wpi.edu/library" target="_blank">
                                 <div class="project-thumbnail">
                                     <img src="assets/images/screenshots/wpi-library/1.png">
                                 </div>
                             </a>
                             <div class="project-title">
-                                <a href="https://www.wpi.edu/library">Library Search</a>
+                                <a href="https://www.wpi.edu/library" target="_blank">Library Search</a>
                             </div>
                             <div class="project-description">Search component for school library</div>
                             <div class="project-implementation">
@@ -267,20 +237,16 @@
                     </div>
                     <ul class="projects">
                         <li>
-                            <a href="assets/documents/assistments.pdf">
+                            <a href="assets/documents/assistments.pdf" target="_blank">
                                 <div class="project-thumbnail-mobile">
                                     <img src="assets/images/screenshots/assistments/1.png">
                                 </div>
                             </a>
                             <div class="project-title">
-                                <a href="assets/documents/assistments.pdf">ASSISTments iOS App</a>
+                                <a href="assets/documents/assistments.pdf" target="_blank">ASSISTments iOS App</a>
                             </div>
                             <div class="project-description">iOS app for intelligent tutoring system
                             </div>
-                            <!--<div class="project-implementation">-->
-                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
-                            <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
-                            <!--</div>-->
                         </li>
                     </ul>
                 </div>
@@ -321,37 +287,32 @@
                     </div>
                     <ul class="projects">
                         <li>
-                            <a href="http://byliuyang.github.io/guanplushomepage">
+                            <a href="http://byliuyang.github.io/guanplushomepage" target="_blank">
                                 <div class="project-thumbnail">
                                     <img src="assets/images/screenshots/guan-plus-homepage/1.png">
                                 </div>
                             </a>
                             <div class="project-title">
-                                <a href="http://byliuyang.github.io/guanplushomepage">Guan Plus</a>
+                                <a href="http://byliuyang.github.io/guanplushomepage" target="_blank">Guan Plus</a>
                             </div>
                             <div class="project-description">Animated homepage for Concordya Inc.</div>
-                            <!--<div class="project-implementation">-->
-                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed-->
-                            <!--<a>responsive-->
-                            <!--layouts</a> and implemented <a>material design</a>.-->
-                            <!--</div>-->
                         </li>
                     </ul>
                 </div>
             </li>
         </ul>
     </li>
-    <li id="projects-pane" class="center">
+    <li id="projects-pane" class="center active-pane">
         <h1>Projects</h1>
         <ul class="projects">
             <li>
-                <a href="https://github.com/byliuyang/HeroDeploy">
+                <a href="https://github.com/byliuyang/HeroDeploy" target="_blank">
                     <div class="project-thumbnail">
                         <img src="assets/images/screenshots/hero-deploy/1.png">
                     </div>
                 </a>
                 <div class="project-title">
-                    <a href="https://github.com/byliuyang/HeroDeploy">HeroDeploy</a>
+                    <a href="https://github.com/byliuyang/HeroDeploy" target="_blank">HeroDeploy</a>
                 </div>
                 <div class="project-description">
                     Automatic deployment git hook for private server
@@ -363,13 +324,13 @@
                 </div>
             </li>
             <li>
-                <a href="https://github.com/byliuyang/captcha-breaker">
+                <a href="https://github.com/byliuyang/captcha-breaker" target="_blank">
                     <div class="project-thumbnail">
                         <img src="assets/images/screenshots/captcha/1.png">
                     </div>
                 </a>
                 <div class="project-title">
-                    <a href="https://github.com/byliuyang/captcha-breaker">Captcha Breaker</a>
+                    <a href="https://github.com/byliuyang/captcha-breaker" target="_blank">Captcha Breaker</a>
                 </div>
                 <div class="project-achievement">
                     Top 1% puzzle solvers, HackMIT
@@ -383,75 +344,54 @@
                 </div>
             </li>
             <li>
-                <a href="https://cover-main.herokuapp.com/">
+                <a href="https://cover-main.herokuapp.com/" target="_blank">
                     <div class="project-thumbnail">
                         <img src="assets/images/screenshots/cover/1.png">
                     </div>
                 </a>
                 <div class="project-title">
-                    <a href="https://cover-main.herokuapp.com/">Cover</a>
+                    <a href="https://cover-main.herokuapp.com/" target="_blank">Cover</a>
                 </div>
                 <div class="project-description">Hints voting system for student</div>
-                <!--<div class="project-implementation">-->
-                <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
-                <!--layouts</a> and implemented <a>material design</a>.-->
-                <!--</div>-->
             </li>
             <li>
-                <a href="https://github.com/byliuyang/wehackers-design">
+                <a href="https://github.com/byliuyang/wehackers-design" target="_blank">
                     <div class="project-thumbnail">
                         <img src="assets/images/screenshots/wehackers/1.png">
                     </div>
                 </a>
                 <div class="project-title">
-                    <a href="https://github.com/byliuyang/wehackers-design">Wehackers</a>
+                    <a href="https://github.com/byliuyang/wehackers-design" target="_blank">Wehackers</a>
                 </div>
                 <div class="project-description">Link sharing website for developers and designers</div>
-                <!--<div class="project-implementation">-->
-                <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
-                <!--layouts</a> and implemented <a>material design</a>.-->
-                <!--</div>-->
             </li>
             <li>
-                <!--<a href="https://github.com/byliuyang/HeroDeploy">-->
                 <div class="project-thumbnail">
                     <img src="assets/images/screenshots/NumEye/1.png">
                 </div>
-                <!--</a>-->
                 <div class="project-title">
                     <a>NumEye</a>
-                    <!--<a href="https://github.com/byliuyang/HeroDeploy">HeroDeploy</a>-->
                 </div>
                 <div class="project-description">
                     Handwritten digits recognizer using neural network
                 </div>
-                <!--<div class="project-implementation">-->
-                <!--Designed a <a>git hook</a> for <a>Angular</a> and <a>Ruby on Rails</a> projects in <a>Bash-->
-                <!--script</a>-->
-                <!--and integrated <a>Procfile</a> and <a>systemd</a> services, easing project deployment.-->
-                <!--</div>-->
             </li>
             <li>
-                <a href="https://github.com/byliuyang/xSmile">
+                <a href="https://github.com/byliuyang/xSmile" target="_blank">
                     <div class="project-thumbnail">
                         <img src="assets/images/screenshots/xSmile/1.png">
                     </div>
                 </a>
                 <div class="project-title">
-                    <a href="https://github.com/byliuyang/xSmile">xSmile</a>
+                    <a href="https://github.com/byliuyang/xSmile" target="_blank">xSmile</a>
                 </div>
                 <div class="project-description">
                     Smile detector based on step-wise regression
                 </div>
-                <!--<div class="project-implementation">-->
-                <!--Designed a <a>git hook</a> for <a>Angular</a> and <a>Ruby on Rails</a> projects in <a>Bash-->
-                <!--script</a>-->
-                <!--and integrated <a>Procfile</a> and <a>systemd</a> services, easing project deployment.-->
-                <!--</div>-->
             </li>
         </ul>
     </li>
-    <li id="activities-pane" class="center">
+    <li id="activities-pane" class="center active-pane">
         <h1>Activities</h1>
         <ul>
             <li>
@@ -462,20 +402,15 @@
                 <div class="date">JANUARY 19, 2018 - JANUARY 21, 2018</div>
                 <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/camlytics">
+                        <a href="https://devpost.com/software/camlytics" target="_blank">
                             <div class="project-thumbnail-mobile">
                                 <img src="assets/images/screenshots/camlytics/1.jpg">
                             </div>
                         </a>
                         <div class="project-title">
-                            <a href="https://devpost.com/software/camlytics">Camlytics</a>
+                            <a href="https://devpost.com/software/camlytics" target="_blank">Camlytics</a>
                         </div>
                         <div class="project-description">Analytics for retail stores</div>
-                        <!--<div class="project-implementation">-->
-                        <!--Developed interactive flash card with <a>ARKit</a>, designed grammar checker with <a>GestureRecognizer</a>,-->
-                        <!--developed real-time object tracking with <a>CoreML</a> and <a>Vision Framework</a> and built-->
-                        <!--the main user interface <a>in team of 5</a>.-->
-                        <!--</div>-->
                     </li>
                 </ul>
             </li>
@@ -487,20 +422,14 @@
                 <div class="date">DECEMBER 1, 2017 - DECEMBER 3, 2017</div>
                 <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/facebook-journey">
+                        <a href="https://devpost.com/software/facebook-journey" target="_blank">
                             <div class="project-thumbnail-mobile">
                                 <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/579/299/datas/gallery.jpg">
                             </div>
                         </a>
                         <div class="project-title">
-                            <a href="https://devpost.com/software/facebook-journey">Journey</a>
+                            <a href="https://devpost.com/software/facebook-journey" target="_blank">Journey</a>
                         </div>
-                        <div class="project-description">Turn based trip planing App</div>
-                        <!--<div class="project-implementation">-->
-                        <!--Developed interactive flash card with <a>ARKit</a>, designed grammar checker with <a>GestureRecognizer</a>,-->
-                        <!--developed real-time object tracking with <a>CoreML</a> and <a>Vision Framework</a> and built-->
-                        <!--the main user interface <a>in team of 5</a>.-->
-                        <!--</div>-->
                     </li>
                 </ul>
             </li>
@@ -512,14 +441,14 @@
                 <div class="date">OCTOBER 28, 2017 - OCTOBER 29, 2017</div>
                 <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/linguis">
+                        <a href="https://devpost.com/software/linguis" target="_blank">
                             <div class="project-thumbnail-mobile">
                                 <div class="project-winner"></div>
                                 <img src="assets/images/screenshots/linguis/1.jpg">
                             </div>
                         </a>
                         <div class="project-title">
-                            <a href="https://devpost.com/software/linguis">Linguis</a>
+                            <a href="https://devpost.com/software/linguis" target="_blank">Linguis</a>
                         </div>
                         <div class="project-achievement">
                             1st Place
@@ -541,19 +470,15 @@
                 <div class="date">SEPTEMBER 16, 2017 - SEPTEMBER 17, 2017</div>
                 <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/elevate-85svgy">
+                        <a href="https://devpost.com/software/elevate-85svgy" target="_blank">
                             <div class="project-thumbnail">
                                 <img src="assets/images/screenshots/elevate/1.png">
                             </div>
                         </a>
                         <div class="project-title">
-                            <a href="https://devpost.com/software/elevate-85svgy">Elevate</a>
+                            <a href="https://devpost.com/software/elevate-85svgy" target="_blank">Elevate</a>
                         </div>
                         <div class="project-description">Stock trading Facebook chat bot</div>
-                        <!--<div class="project-implementation">-->
-                        <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
-                        <!--layouts</a> and implemented <a>material design</a>.-->
-                        <!--</div>-->
                     </li>
                 </ul>
             </li>
@@ -565,19 +490,15 @@
                 <div class="date">JUNE 17, 2017 - JUNE 18, 2017</div>
                 <ul class="projects">
                     <li>
-                        <a href="https://github.com/ftlc/WeighIn">
+                        <a href="https://github.com/ftlc/WeighIn" target="_blank">
                             <div class="project-thumbnail">
                                 <img src="assets/images/screenshots/weight-in/1.png">
                             </div>
                         </a>
                         <div class="project-title">
-                            <a href="https://github.com/ftlc/WeighIn">WeighIn</a>
+                            <a href="https://github.com/ftlc/WeighIn" target="_blank">WeighIn</a>
                         </div>
                         <div class="project-description">Real-time page highlighting chrome extension</div>
-                        <!--<div class="project-implementation">-->
-                        <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
-                        <!--layouts</a> and implemented <a>material design</a>.-->
-                        <!--</div>-->
                     </li>
                 </ul>
             </li>
@@ -589,19 +510,15 @@
                 <div class="date">FEBRUARY 6, 2017 - FEBRUARY 7, 2017</div>
                 <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/code-etch">
+                        <a href="https://devpost.com/software/code-etch" target="_blank">
                             <div class="project-thumbnail">
                                 <img src="assets/images/screenshots/code-etch/1.png">
                             </div>
                         </a>
                         <div class="project-title">
-                            <a href="https://devpost.com/software/code-etch">CodeEtch</a>
+                            <a href="https://devpost.com/software/code-etch" target="_blank">CodeEtch</a>
                         </div>
                         <div class="project-description">Class relation visualizer for Java projects</div>
-                        <!--<div class="project-implementation">-->
-                        <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>, designed <a>responsive-->
-                        <!--layouts</a> and implemented <a>material design</a>.-->
-                        <!--</div>-->
                     </li>
                 </ul>
             </li>
@@ -613,14 +530,14 @@
                 <div class="date">JANUARY 14, 2017 - JANUARY 15, 2017</div>
                 <ul class="projects">
                     <li>
-                        <a href="https://devpost.com/software/knockt-com">
+                        <a href="https://devpost.com/software/knockt-com" target="_blank">
                             <div class="project-thumbnail">
                                 <div class="project-winner"></div>
                                 <img src="assets/images/screenshots/knockt/1.png">
                             </div>
                         </a>
                         <div class="project-title">
-                            <a href="https://devpost.com/software/knockt-com">Knockt</a>
+                            <a href="https://devpost.com/software/knockt-com" target="_blank">Knockt</a>
                         </div>
                         <div class="project-achievement">
                             1st Place
@@ -645,13 +562,13 @@
                 <div class="date">SEPTEMBER, 2017 - PRESENT</div>
                 <ul class="projects">
                     <li>
-                        <a href="https://github.com/byliuyang/HackWPI-Design">
+                        <a href="https://github.com/byliuyang/HackWPI-Design" target="_blank">
                             <div class="project-thumbnail show-top">
                                 <img src="assets/images/screenshots/hack-wpi/1.jpg">
                             </div>
                         </a>
                         <div class="project-title">
-                            <a href="https://github.com/byliuyang/HackWPI-Design">HACK@WPI Design</a>
+                            <a href="https://github.com/byliuyang/HackWPI-Design" target="_blank">HACK@WPI Design</a>
                         </div>
                         <div class="project-description">
                             Design document for HACK@WPI 2018 official website
@@ -670,7 +587,7 @@
             </li>
         </ul>
     </li>
-    <li id="education-pane" class="center">
+    <li id="education-pane" class="center active-pane">
         <h1>Education</h1>
         <ul>
             <li class="school-info">
@@ -688,7 +605,7 @@
                                 <li>
                                     <!--<ul class="photo-gallery">-->
                                     <!--<li class="project-thumbnail">-->
-                                    <a href="https://github.com/NaviRice/Services">
+                                    <a href="https://github.com/NaviRice/Services" target="_blank">
                                         <div class="project-thumbnail">
                                             <img src="assets/images/screenshots/navi-rice/1.jpg">
                                         </div>
@@ -696,7 +613,7 @@
                                     <!--</li>-->
                                     <!--</ul>-->
                                     <div class="project-title">
-                                        <a href="https://github.com/NaviRice/Services">NaviRice</a>
+                                        <a href="https://github.com/NaviRice/Services" target="_blank">NaviRice</a>
                                     </div>
                                     <div class="project-description">
                                         Augmented reality vehicle navigation system
@@ -715,13 +632,14 @@
                             <div class="course">Webware: Computation Technology for Information System</div>
                             <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/MovieSearch">
+                                    <a href="https://github.com/byliuyang/MovieSearch" target="_blank">
                                         <div class="project-thumbnail">
                                             <img src="assets/images/screenshots/movie-search/1.png">
                                         </div>
                                     </a>
                                     <div class="project-title">
-                                        <a href="https://github.com/byliuyang/MovieSearch">MovieSearch</a>
+                                        <a href="https://github.com/byliuyang/MovieSearch"
+                                           target="_blank">MovieSearch</a>
                                     </div>
                                     <div class="project-description">
                                         Online movie information lookup website
@@ -734,7 +652,7 @@
                                 <li>
                                     <!--<ul class="photo-gallery">-->
                                     <!--<li class="project-thumbnail">-->
-                                    <a href="https://github.com/byliuyang/Posts">
+                                    <a href="https://github.com/byliuyang/Posts" target="_blank">
                                         <div class="project-thumbnail">
                                             <img src="assets/images/screenshots/posts/1.png">
                                         </div>
@@ -742,7 +660,7 @@
                                     <!--</li>-->
                                     <!--</ul>-->
                                     <div class="project-title">
-                                        <a href="https://github.com/byliuyang/Posts">Posts</a>
+                                        <a href="https://github.com/byliuyang/Posts" target="_blank">Posts</a>
                                     </div>
                                     <div class="project-description">
                                         Real-time anonymous chat room
@@ -758,21 +676,17 @@
                             <div class="course">Software Engineering</div>
                             <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/mySixwild">
+                                    <a href="https://github.com/byliuyang/mySixwild" target="_blank">
                                         <div class="project-thumbnail">
                                             <img src="assets/images/screenshots/sixwild/1.png">
                                         </div>
                                     </a>
                                     <div class="project-title">
-                                        <a href="https://github.com/byliuyang/mySixwild">mySixwild</a>
+                                        <a href="https://github.com/byliuyang/mySixwild" target="_blank">mySixwild</a>
                                     </div>
                                     <div class="project-description">
                                         Candy crush like single player desktop game
                                     </div>
-                                    <!--<div class="project-implementation">-->
-                                    <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
-                                    <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
-                                    <!--</div>-->
                                 </li>
                             </ul>
                         </li>
@@ -780,106 +694,37 @@
                             <div class="course">Computer Vision</div>
                             <ul class="projects">
                                 <li>
-                                    <a href="https://github.com/byliuyang/cVision">
+                                    <a href="https://github.com/byliuyang/cVision" target="_blank">
                                         <div class="project-thumbnail">
                                             <img src="assets/images/screenshots/c-vision/1.jpg">
                                         </div>
                                     </a>
                                     <div class="project-title">
-                                        <a href="https://github.com/byliuyang/cVision">cVision</a>
+                                        <a href="https://github.com/byliuyang/cVision" target="_blank">cVision</a>
                                     </div>
                                     <div class="project-description">
                                         Scale and rotation invariant feature matcher
                                     </div>
-                                    <!--<div class="project-implementation">-->
-                                    <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
-                                    <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
-                                    <!--</div>-->
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <div class="course">Operating Systems</div>
-                            <!--<ul class="projects">-->
-                            <!--<li>-->
-                            <!--<div class="project-title">-->
-                            <!--<a href="https://github.com/byliuyang/virusCounter">virusCounter</a>-->
-                            <!--</div>-->
-                            <!--<div class="project-description">-->
-                            <!--Active virus detector-->
-                            <!--</div>-->
-                            <!--<div class="project-implementation">-->
-                            <!--Designed a <a>loadable kernel module</a> in <a>C</a>,-->
-                            <!--intercepted <a>system calls</a> and monitored <a>open, read, and write</a>-->
-                            <!--operations.-->
-                            <!--</div>-->
-                            <!--</li>-->
-                            <!--</ul>-->
                         </li>
                         <li>
                             <div class="course">Tools & Techniques in Computer Network Security</div>
-                            <!--<ul class="projects">-->
-                            <!--<li>-->
-                            <!--<div class="project-title">-->
-                            <!--<a href="https://github.com/byliuyang/netGuard">netGuard</a>-->
-                            <!--</div>-->
-                            <!--<div class="project-description">-->
-                            <!--DNS capability based Anti-DDOS system-->
-                            <!--</div>-->
-                            <!--</li>-->
-                            <!--</ul>-->
                         </li>
                         <li>
                             <div class="course">Computer Networks</div>
-                            <!--<ul class="projects">-->
-                            <!--<li>-->
-                            <!--<div class="project-title">-->
-                            <!--<a href="https://github.com/byliuyang/harryHttpd">harryHttpd</a>-->
-                            <!--</div>-->
-                            <!--<div class="project-description">-->
-                            <!--Maltreated high performance HTTP server-->
-                            <!--</div>-->
-                            <!--</li>-->
-                            <!--</ul>-->
                         </li>
                         <li>
                             <div class="course">Intro to Artificial Intelligence</div>
-                            <!--<ul class="projects">-->
-                            <!--<li>-->
-                            <!--<div class="project-title">-->
-                            <!--<a href="https://github.com/byliuyang/connect-n-ai">Connect N</a>-->
-                            <!--</div>-->
-                            <!--<div class="project-description">-->
-                            <!--AI for connect-N game-->
-                            <!--</div>-->
-                            <!--</li>-->
-                            <!--</ul>-->
                         </li>
                         <li>
                             <div class="course">Object-oriented Analysis & Design</div>
-                            <!--<ul class="projects">-->
-                            <!--<li>-->
-                            <!--<div class="project-title">-->
-                            <!--<a href="https://github.com/byliuyang/xiangqi">Xiangqi</a>-->
-                            <!--</div>-->
-                            <!--<div class="project-description">-->
-                            <!--Multi-version & multi-player Chinese Chess game-->
-                            <!--</div>-->
-                            <!--</li>-->
-                            <!--</ul>-->
                         </li>
                         <li>
                             <div class="course">Advanced Computer Networks</div>
-                            <!--<ul class="projects">-->
-                            <!--<li>-->
-                            <!--<div class="project-title">-->
-                            <!--<a href="https://github.com/byliuyang/SuperSDN">superSDN</a>-->
-                            <!--</div>-->
-                            <!--<div class="project-description">-->
-                            <!--OpenFlow based network assets projector-->
-                            <!--</div>-->
-                            <!--</li>-->
-                            <!--</ul>-->
                         </li>
                         <li class="course">Intro to Machine Organization & Assembly Language</li>
                         <li class="course">Database Systems</li>
@@ -910,10 +755,6 @@
                                 <a href="#">BHIS</a>
                             </div>
                             <div class="project-description">Weifang Beihai International High School Website</div>
-                            <!--<div class="project-implementation">-->
-                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
-                            <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
-                            <!--</div>-->
                         </li>
                         <li>
                             <div class="project-thumbnail">
@@ -923,25 +764,17 @@
                                 <a href="#">U.S. Flag</a>
                             </div>
                             <div class="project-description">Pure Java U.S. Flag</div>
-                            <!--<div class="project-implementation">-->
-                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
-                            <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
-                            <!--</div>-->
                         </li>
                         <li>
-                            <a href="https://github.com/byliuyang/hplane">
+                            <a href="https://github.com/byliuyang/hplane" target="_blank">
                                 <div class="project-thumbnail-mobile">
                                     <img src="assets/images/screenshots/hplane/1.jpg">
                                 </div>
                             </a>
                             <div class="project-title">
-                                <a href="https://github.com/byliuyang/hplane">hplane</a>
+                                <a href="https://github.com/byliuyang/hplane" target="_blank">hplane</a>
                             </div>
                             <div class="project-description">iOS & Android Air-fighter Game</div>
-                            <!--<div class="project-implementation">-->
-                            <!--Developed a backend framework in <a>Node.js</a> supporting <a>WebSockets</a>,-->
-                            <!--designed <a>responsive layouts</a> and implemented <a>material design</a>.-->
-                            <!--</div>-->
                         </li>
                     </ul>
                 </div>
@@ -955,42 +788,46 @@
                     <div class="date">SEPTEMBER 2012 - PRESENT</div>
                     <ul>
                         <li class="course">
-                            <a href="https://www.udacity.com/course/android-basics-user-interface--ud834">
+                            <a href="https://www.udacity.com/course/android-basics-user-interface--ud834"
+                               target="_blank">
                                 Android Basics: User Interface
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udacity.com/course/new-android-fundamentals--ud851">
+                            <a href="https://www.udacity.com/course/new-android-fundamentals--ud851" target="_blank">
                                 Developing Android Apps
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udacity.com/course/advanced-android-app-development--ud855">
+                            <a href="https://www.udacity.com/course/advanced-android-app-development--ud855"
+                               target="_blank">
                                 Advanced Android App Development
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udacity.com/course/intro-to-ios-app-development-with-swift--ud585">
+                            <a href="https://www.udacity.com/course/intro-to-ios-app-development-with-swift--ud585"
+                               target="_blank">
                                 Intro to iOS App Development with Swift
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udacity.com/course/intro-to-machine-learning--ud120">
+                            <a href="https://www.udacity.com/course/intro-to-machine-learning--ud120" target="_blank">
                                 Intro to Machine Learning
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udacity.com/course/intro-to-self-driving-cars--nd113">
+                            <a href="https://www.udacity.com/course/intro-to-self-driving-cars--nd113" target="_blank">
                                 Intro to Self-driving Car
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udacity.com/course/machine-learning--ud262">
+                            <a href="https://www.udacity.com/course/machine-learning--ud262" target="_blank">
                                 Machine Learning *
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udacity.com/course/introduction-to-computer-vision--ud810">
+                            <a href="https://www.udacity.com/course/introduction-to-computer-vision--ud810"
+                               target="_blank">
                                 Introduction to Computer Vision *
                             </a>
                         </li>
@@ -1006,17 +843,18 @@
                     <div class="date">SEPTEMBER 2013 - PRESENT</div>
                     <ul>
                         <li class="course">
-                            <a href="https://www.udemy.com/job-ready-web-developer/">
+                            <a href="https://www.udemy.com/job-ready-web-developer" target="_blank">
                                 The Complete Web Developer Bootcamp - Beginner to Expert
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udemy.com/tutorial-design-youtube-app-ui-ux-sketch3-swift">
+                            <a href="https://www.udemy.com/tutorial-design-youtube-app-ui-ux-sketch3-swift"
+                               target="_blank">
                                 Sketch 3 - New Guide To iOS 8 Mobile App Design (2015)
                             </a>
                         </li>
                         <li class="course">
-                            <a href="https://www.udemy.com/the-complete-ios-9-developer-course">
+                            <a href="https://www.udemy.com/the-complete-ios-9-developer-course" target="_blank">
                                 The Complete iOS 9 Developer Course - Build 18 Apps
                             </a>
                         </li>
@@ -1036,7 +874,7 @@
                     <div class="date">FEBRUARY 2018 - PRESENT</div>
                     <ul>
                         <li class="course">
-                            <a href="http://cs231n.stanford.edu">
+                            <a href="http://cs231n.stanford.edu" target="_blank">
                                 CS231n: Convolutional Neural Networks for Visual Recognition
                             </a>
                         </li>
@@ -1045,7 +883,18 @@
             </li>
         </ul>
     </li>
-    <li id="favorite-boos-pane" class="center">
+    <li id="certificate-pane" class="center active-pane">
+        <h1>Certificates</h1>
+        <div class="certificates">
+            <div class="certificate first">
+                <div class="thumbnail">
+                    <img src="assets/images/certificates/nanodegree/intro-to-self-driving-car.jpg">
+                </div>
+                <div class="title">Intro to Self-Driving Car Nanodegree</div>
+            </div>
+        </div>
+    </li>
+    <li id="favorite-books-pane" class="center active-pane">
         <h1>Favorite books</h1>
         <ul class="books">
             <li>
@@ -1053,7 +902,9 @@
                     <img src="http://eloquentjavascript.net/img/cover.jpg">
                 </div>
                 <div>
-                    <a href="http://eloquentjavascript.net">Eloquent Javascript</a>
+                    <a href="http://eloquentjavascript.net" target="_blank">
+                        Eloquent Javascript
+                    </a>
                 </div>
             </li>
             <li>
@@ -1061,7 +912,9 @@
                     <img src="https://survivejs.com/8f86c1d07d5536454690030cd1a10b53.png">
                 </div>
                 <div>
-                    <a href="https://survivejs.com/webpack">SurviveJs: Webpack</a>
+                    <a href="https://survivejs.com/webpack" target="_blank">
+                        SurviveJs: Webpack
+                    </a>
                 </div>
             </li>
             <li>
@@ -1069,7 +922,9 @@
                     <img src="https://survivejs.com/b61671d95f81496495f2587a10ddb122.png">
                 </div>
                 <div>
-                    <a href="https://survivejs.com/react">SurviveJs: React</a>
+                    <a href="https://survivejs.com/react" target="_blank">
+                        SurviveJs: React
+                    </a>
                 </div>
             </li>
             <li>
@@ -1077,8 +932,9 @@
                     <img src="assets/images/book-covers/grid-layout.png">
                 </div>
                 <div>
-                    <a href="https://abookapart.com/products/get-ready-for-css-grid-layout">Get Ready for CSS Grid
-                        Layout</a>
+                    <a href="https://abookapart.com/products/get-ready-for-css-grid-layout" target="_blank">
+                        Get Ready for CSS Grid Layout
+                    </a>
                 </div>
             </li>
             <li>
@@ -1086,7 +942,9 @@
                     <img src="assets/images/book-covers/ng-book.jpg">
                 </div>
                 <div>
-                    <a href="https://www.ng-book.com/2">ng-book 2</a>
+                    <a href="https://www.ng-book.com/2" target="_blank">
+                        ng-book 2
+                    </a>
                 </div>
             </li>
             <li>
@@ -1094,7 +952,9 @@
                     <img src="assets/images/book-covers/build-your-own-angular-js.png">
                 </div>
                 <div>
-                    <a href="https://teropa.info/build-your-own-angular/">Build your own AngularJS</a>
+                    <a href="https://teropa.info/build-your-own-angular/" target="_blank">
+                        Build your own AngularJS
+                    </a>
                 </div>
             </li>
             <li>
@@ -1102,7 +962,9 @@
                     <img src="assets/images/book-covers/fullstack-react.jpg">
                 </div>
                 <div>
-                    <a href="https://www.fullstackreact.com">Fullstack React</a>
+                    <a href="https://www.fullstackreact.com" target="_blank">
+                        Fullstack React
+                    </a>
                 </div>
             </li>
             <li>
@@ -1110,9 +972,9 @@
                     <img src="https://camo.githubusercontent.com/995c301de2f566db10748042a5a67cc5d9ac45d9/687474703a2f2f692e696d6775722e636f6d2f484d47574e4f352e706e67">
                 </div>
                 <div>
-                    <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754">The introduction to Reactive
-                        Programming
-                        you've been missing</a>
+                    <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754" target="_blank">
+                        The introduction to Reactive Programming you've been missing
+                    </a>
                 </div>
             </li>
             <li>
@@ -1120,8 +982,10 @@
                     <img src="https://images-na.ssl-images-amazon.com/images/I/51pKgaZR15L._SX379_BO1,204,203,200_.jpg">
                 </div>
                 <div>
-                    <a href="https://www.amazon.com/Undisturbed-REST-Guide-Designing-Perfect/dp/1329115945">Undistributed
-                        REST</a>
+                    <a href="https://www.amazon.com/Undisturbed-REST-Guide-Designing-Perfect/dp/1329115945"
+                       target="_blank">
+                        Undistributed REST
+                    </a>
                 </div>
             </li>
             <li>
@@ -1129,7 +993,9 @@
                     <img src="https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_4th_edition/images/cover-web.png">
                 </div>
                 <div>
-                    <a href="https://www.railstutorial.org/book">Ruby on Rails Tutorial</a>
+                    <a href="https://www.railstutorial.org/book" target="_blank">
+                        Ruby on Rails Tutorial
+                    </a>
                 </div>
             </li>
             <li>
@@ -1137,7 +1003,9 @@
                     <img src="assets/images/book-covers/you-dont-know-js.jpg">
                 </div>
                 <div>
-                    <a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a>
+                    <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">
+                        You Don't Know JS
+                    </a>
                 </div>
             </li>
             <li>
@@ -1145,7 +1013,9 @@
                     <img src="http://algs4.cs.princeton.edu/cover.png">
                 </div>
                 <div>
-                    <a href="http://algs4.cs.princeton.edu/home">Algorithms</a>
+                    <a href="http://algs4.cs.princeton.edu/home" target="_blank">
+                        Algorithms
+                    </a>
                 </div>
             </li>
             <li>
@@ -1153,8 +1023,9 @@
                     <img src="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/2007-04-26/cover.jpg">
                 </div>
                 <div>
-                    <a href="https://cs.brown.edu/courses/cs173/2012/book">Programming Languages: Application and
-                        Interpretation</a>
+                    <a href="https://cs.brown.edu/courses/cs173/2012/book" target="_blank">
+                        Programming Languages: Application and Interpretation
+                    </a>
                 </div>
             </li>
             <li>
@@ -1162,8 +1033,10 @@
                     <img src="assets/images/book-covers/modern-compiler.png">
                 </div>
                 <div>
-                    <a href="https://www.amazon.com/Modern-Compiler-Implementation-Andrew-Appel/dp/052182060X">Modern
-                        Compiler Implementation in Java</a>
+                    <a href="https://www.amazon.com/Modern-Compiler-Implementation-Andrew-Appel/dp/052182060X"
+                       target="_blank">
+                        Modern Compiler Implementation in Java
+                    </a>
                 </div>
             </li>
             <li>
@@ -1171,7 +1044,9 @@
                     <img src="https://images-na.ssl-images-amazon.com/images/I/41AoUQujOCL._SX387_BO1,204,203,200_.jpg">
                 </div>
                 <div>
-                    <a href="http://csapp.cs.cmu.edu/">Computer System: A programmer's perspective</a>
+                    <a href="http://csapp.cs.cmu.edu" target="_blank">
+                        Computer System: A programmer's perspective
+                    </a>
                 </div>
             </li>
         </ul>
@@ -1194,7 +1069,9 @@
         </li>
         <li>
             <!--Analytics-->
-            <script id="_wau6nm">var _wau = _wau || []; _wau.push(["dynamic", "z7hijl3iqc", "6nm", "666666ffffff", "small"]);</script><script async src="//waust.at/d.js"></script>
+            <script id="_wau6nm">var _wau = [];
+            _wau.push(["dynamic", "z7hijl3iqc", "6nm", "666666ffffff", "small"]);</script>
+            <script async src="//waust.at/d.js"></script>
         </li>
     </ul>
 </footer>

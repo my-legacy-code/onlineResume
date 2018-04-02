@@ -73,13 +73,13 @@ and (-webkit-min-device-pixel-ratio : 2) {
         background-color : rgba(0, 0, 0, 0.2);
     }
 
-    header nav ul li a {
+    header nav ul li {
         display         : flex;
         flex-direction  : row;
         justify-content : center;
     }
 
-    header nav ul li a div:first-child {
+    header nav ul li div:first-child {
         margin-right : 20px;
     }
 
@@ -121,13 +121,13 @@ and (-webkit-min-device-pixel-ratio : 2) {
         color      : white;
     }
 
-    #main-content > li:not(:first-child) {
+    #main-content > li:not(:first-child), #pane-wrapper {
         padding-left  : 20px;
         padding-right : 20px;
     }
 
     #contributions-pane {
-        display: none;
+        display : none;
     }
 
     .school-logo, .activity-logo, .company-logo {
@@ -144,7 +144,7 @@ and (-webkit-min-device-pixel-ratio : 2) {
     }
 
     #contact-pane > ul > li:not(:last-child) {
-        margin-right: 0;
+        margin-right : 0;
     }
 
     .books > li {
@@ -310,7 +310,7 @@ header nav ul li {
     flex       : 1;
 }
 
-header nav ul li a {
+header nav ul li {
     text-decoration : none;
 }
 
@@ -350,6 +350,7 @@ header nav ul li.active {
 
 #biography-pane {
     color           : white;
+    margin-bottom   : 50px;
     text-shadow     : 0 0 10px rgba(0, 0, 0, 0.8);
     background      : url("../images/bg.jpg") center;
     background-size : cover;
@@ -426,8 +427,8 @@ a {
 }
 
 #contact-pane {
-    font-size: 14px;
-    color            : #555555;
+    font-size : 14px;
+    color     : #555555;
 }
 
 #contact-pane ul {
@@ -442,18 +443,14 @@ a {
 }
 
 #copyright-pane {
-    font-size: 14px;
-    text-align       : center;
-    margin          : 10px 0 20px 0;
-    color            : #555555;
+    font-size  : 14px;
+    text-align : center;
+    margin     : 10px 0 20px 0;
+    color      : #555555;
 }
 
 #education-pane {
     margin : 0 auto;
-}
-
-#experiences-pane {
-    margin-top : 50px;
 }
 
 #education-pane > ul, #experiences-pane > ul {
@@ -530,12 +527,19 @@ a {
     text-decoration : underline;
 }
 
+.project-thumbnail {
+    width : 100%;
+}
+
+.project-thumbnail-mobile {
+    width : 50%;
+}
+
 .project-thumbnail, .project-thumbnail-mobile {
     position         : relative;
     background-color : white;
     transition       : all 0.3s cubic-bezier(.25, .8, .25, 1);
     margin-bottom    : 20px;
-    width            : 100%;
     font-size        : 0;
     box-shadow       : 0 0 6px rgba(0, 0, 0, 0.2);
 }
@@ -643,8 +647,8 @@ a {
     font-weight : bold;
 }
 
-#contributions-pane, #favorite-boos-pane {
-    margin-top : 50px;
+#contributions-pane {
+    margin-bottom : 50px;
 }
 
 .photo-gallery {
@@ -728,18 +732,67 @@ a {
 }
 
 #github-calender {
-    padding : 40px;
-    width   : 676px;
-    border  : 1px solid #DDDDDD;
+    padding          : 40px;
+    width            : 676px;
+    border           : 1px solid #DDDDDD;
+    background-color : rgb(250, 250, 250);
 }
 
 #github-calender > h2 {
     display : none;
 }
 
+#hidden-panes {
+    display : none;
+}
+
+#pane-wrapper {
+    list-style : none;
+}
+
+#pane-wrapper h1 {
+    color      : #2079c7;
+    margin-top : 0;
+}
+
+.certificates {
+    display           : grid;
+    grid-auto-columns : 40% 10% 40%;
+    grid-auto-rows    : auto;
+    grid-row-gap      : 50px;
+}
+
+.certificate.first {
+    grid-column-start : 1;
+    grid-column-end   : 2;
+}
+
+.certificate.second {
+    grid-column-start : 3;
+    grid-column-end   : 4;
+}
+
+.certificate > .thumbnail {
+    box-shadow    : 0 0 6px rgba(0, 0, 0, 0.2);
+    margin-bottom : 20px;
+}
+
+.certificate > .thumbnail > img {
+    width : 100%;
+}
+
+.certificate > .title {
+    text-align  : center;
+    font-weight : bolder;
+}
+
+footer {
+    margin-top : 100px;
+}
+
 footer > ul {
-    text-align: center;
-    border-top :1px solid #e6e6e6;
-    padding: 60px 0;
-    margin  : 0;
+    text-align : center;
+    border-top : 1px solid #e6e6e6;
+    padding    : 60px 0;
+    margin     : 0;
 }

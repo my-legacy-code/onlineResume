@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     let menuEl = document.querySelector('#header nav > ul');
     let menuShown = false;
 
-    menuBtn.addEventListener('click', event =>{
+    menuBtn.addEventListener('click', event => {
         if (menuShown) {
             $(navEl).css('height', 0);
             menuBtn.textContent = 'menu';
@@ -15,14 +15,6 @@ window.addEventListener('load', () => {
             menuBtn.textContent = 'close';
         }
         menuShown = !menuShown;
-    });
-
-    let closeMessageBtn = document.querySelector('#close-message-btn');
-    let topFlashMessage = document.querySelector('#top-flash-message');
-    let body = document.body;
-    closeMessageBtn.addEventListener('click', event => {
-        $(body).removeClass('show-message');
-        $(topFlashMessage).addClass('hide');
     });
 
     let tabEls = Array.from(document.querySelectorAll('header nav > ul > li'));
@@ -39,25 +31,51 @@ window.addEventListener('load', () => {
     });
     switchTo(tabEls[0]);
 
-    document.querySelectorAll('a').forEach(aEl => {
-        if (aEl.href.indexOf(`${window.location.href}#`) !== -1)
-            aEl.addEventListener('click', event => {
-                event.preventDefault();
-                let idIndex = aEl.href.indexOf('#');
-                let id = aEl.href.substr(idIndex);
-                $(document.body).animate({
-                    scrollTop: $(id).offset().top
-                }, 1000);
-                $(document.documentElement).animate({
-                    scrollTop: $(id).offset().top
-                }, 1000);
-            });
-    });
+
+    let paneWrapper = document.querySelector('#pane-wrapper');
+    let hiddenPanes = document.querySelector('#hidden-panes');
+
+    function showPane(paneId) {
+
+        function displayNewPane() {
+            let pane = hiddenPanes.querySelector(`#${paneId}`);
+            paneWrapper.appendChild(pane);
+
+            $(paneWrapper)
+                .animate({
+                    opacity:1
+                }, 500, 'swing', ()=>{
+
+                });
+        }
+
+        let currentPane = paneWrapper.querySelector('.active-pane');
+        if (currentPane) {
+            $(paneWrapper)
+                .animate({
+                    opacity: 0
+                }, 500, 'swing', () => {
+                    hiddenPanes.appendChild(currentPane);
+                    displayNewPane();
+                });
+        } else displayNewPane();
+
+
+    }
+
+    document.querySelectorAll('[data-pane-id]')
+        .forEach(el => {
+                el.addEventListener('click', (event) => {
+                    let paneId = el.dataset.paneId;
+                    showPane(paneId);
+                });
+            }
+        );
 
     document.querySelectorAll('.photo-gallery').forEach(photoEl => {
         let active = false;
         photoEl.firstChild.nextSibling.addEventListener('click', event => {
-            if(!active)
+            if (!active)
                 $(photoEl).addClass('shown');
             else
                 $(photoEl).removeClass('shown');
@@ -65,5 +83,7 @@ window.addEventListener('load', () => {
         });
     });
 
-    GitHubCalendar('#github-calender', GITHUB_USERNAME)
+    GitHubCalendar('#github-calender', GITHUB_USERNAME);
+
+    showPane('experiences-pane');
 });
