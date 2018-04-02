@@ -1,4 +1,6 @@
 window.addEventListener('load', () => {
+    const GITHUB_USERNAME = 'byliuyang';
+
     let menuBtn = document.querySelector('#menu-btn');
     let navEl = document.querySelector('#header nav');
     let menuEl = document.querySelector('#header nav > ul');
@@ -63,9 +65,5 @@ window.addEventListener('load', () => {
         });
     });
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-108153620-1');
+    GitHubCalendar('#github-calender', GITHUB_USERNAME)
 });

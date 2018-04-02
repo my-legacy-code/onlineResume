@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Yang Liu</title>
+
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="assets/styles/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/styles/font-mfizz.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="assets/styles/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/styles/font-mfizz.css"/>
+    <link rel="stylesheet" href="assets/styles/github-calendar.css"/>
+    <link rel="stylesheet" href="assets/styles/github-calendar-responsive.css"/>
     <link rel="stylesheet" href="assets/styles/index.css"/>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108153620-1"></script>
+
+    <script src="assets/scripts/jquery-3.2.1.min.js"></script>
+    <script src="assets/scripts/github-calendar.min.js"></script>
     <script type="text/javascript" src="assets/scripts/index.js"></script>
+
     <meta name="description"
           content="I am a computer science student graduating in May 2018 and seeking a full-time software engineering position.">
     <meta name="keywords" content="Web, ES6, iOS, Computer Vision, Machine Learning, UI, Algorithm, Developer">
@@ -31,16 +35,6 @@
         <div id="logo">Yang Liu</div>
         <nav>
             <ul>
-                <li>
-                    <a href="#achievements-pane">
-                        <div>
-                            <i class="material-icons">star</i>
-                        </div>
-                        <div>
-                            Achievements
-                        </div>
-                    </a>
-                </li>
                 <li>
                     <a href="#experiences-pane">
                         <div>
@@ -151,19 +145,23 @@
                             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                         </a>
                     </li>
+                    <li>
+                        <a href="https://devpost.com/byliuyang11" title="Devpost">
+                            <img src="assets/images/platforms/devpost.svg"  class="devpost-icon" >
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </li>
-    <li id="achievements-pane" class="center">
-        <h1>Achievements</h1>
+    <li id="contributions-pane" class="center">
+        <h1>Contributions</h1>
         <ul>
-            <li>1st Place, BostonHacks, 2017</li>
-            <li>
-                Top 1% puzzle solvers, HackMIT, 2017
-            </li>
-            <li>
-                1st Place, HACK@WPI, 2016
+            <li class="platform-info">
+                <div class="platform-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
+                </div>
+                <div id="github-calender"></div>
             </li>
         </ul>
     </li>
@@ -179,7 +177,7 @@
                             class="important">Full-stack Web Developer, Intern, Worcester Polytechnic Institute</span>,
                         Worcester, MA, US
                     </div>
-                    <div class="date">MARCH 2017 – PRESENT</div>
+                    <div class="date">MARCH 2017 – MARCH 2018</div>
                     <ul class="projects">
                         <li>
                             <div class="project-thumbnail">
@@ -331,6 +329,9 @@
                 <div class="project-title">
                     <a href="https://github.com/byliuyang/captcha-breaker">Captcha Breaker</a>
                 </div>
+                <div class="project-achievement">
+                    Top 1% puzzle solvers, HackMIT
+                </div>
                 <div class="project-description">
                     Recognizing four characters in CAPTCHA
                 </div>
@@ -372,6 +373,52 @@
         <ul>
             <li>
                 <div class="activity-logo">
+                    <img src="assets/images/hackathons/pennapp-xvii.png">
+                </div>
+                <div class="activity-title">PennApps, University of Pennsylvania Hackathon</div>
+                <div class="date">JANUARY 19, 2018 - JANUARY 21, 2018</div>
+                <ul class="projects">
+                    <li>
+                        <div class="project-thumbnail-mobile">
+                            <img src="assets/images/screenshots/camlytics/1.jpg">
+                        </div>
+                        <div class="project-title">
+                            <a href="https://devpost.com/software/facebook-journey">Camlytics</a>
+                        </div>
+                        <div class="project-description">Analytics for retail stores</div>
+                        <!--<div class="project-implementation">-->
+                        <!--Developed interactive flash card with <a>ARKit</a>, designed grammar checker with <a>GestureRecognizer</a>,-->
+                        <!--developed real-time object tracking with <a>CoreML</a> and <a>Vision Framework</a> and built-->
+                        <!--the main user interface <a>in team of 5</a>.-->
+                        <!--</div>-->
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="activity-logo">
+                    <img src="assets/images/hackathons/yhack.jpg">
+                </div>
+                <div class="activity-title">YHack, Yale Hackathon</div>
+                <div class="date">DECEMBER 1, 2017 - DECEMBER 3, 2017</div>
+                <ul class="projects">
+                    <li>
+                        <div class="project-thumbnail-mobile">
+                            <img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/579/299/datas/gallery.jpg">
+                        </div>
+                        <div class="project-title">
+                            <a href="https://devpost.com/software/facebook-journey">Journey</a>
+                        </div>
+                        <div class="project-description">Turn based trip planing App</div>
+                        <!--<div class="project-implementation">-->
+                            <!--Developed interactive flash card with <a>ARKit</a>, designed grammar checker with <a>GestureRecognizer</a>,-->
+                            <!--developed real-time object tracking with <a>CoreML</a> and <a>Vision Framework</a> and built-->
+                            <!--the main user interface <a>in team of 5</a>.-->
+                        <!--</div>-->
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="activity-logo">
                     <img src="https://bostonhacks.io/public/img/terrierLogo.png">
                 </div>
                 <div class="activity-title">BostonHacks, BU Hackathon</div>
@@ -384,6 +431,9 @@
                         </div>
                         <div class="project-title">
                             <a href="https://devpost.com/software/linguis">Linguis</a>
+                        </div>
+                        <div class="project-achievement">
+                            1st Place
                         </div>
                         <div class="project-description">AR app for language learners</div>
                         <div class="project-implementation">
@@ -418,7 +468,7 @@
             </li>
             <li>
                 <div class="activity-logo">
-                    <img src="http://angelhack.com/wp-content/uploads/2016/02/AngelHack.png">
+                    <img src="http://blogathonatx.com/wp-content/uploads/2013/11/AngelHackLogo.jpg">
                 </div>
                 <div class="activity-title">AngelHack, Hackathon</div>
                 <div class="date">JUNE 17, 2017 - JUNE 18, 2017</div>
@@ -475,6 +525,9 @@
                         <div class="project-title">
                             <a href="https://devpost.com/software/knockt-com">Knockt</a>
                         </div>
+                        <div class="project-achievement">
+                            1st Place
+                        </div>
                         <div class="project-description">
                             Virtual doorbell system
                         </div>
@@ -489,7 +542,7 @@
             </li>
             <li>
                 <div class="activity-logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Association_for_Computing_Machinery_%28ACM%29_logo.svg/1024px-Association_for_Computing_Machinery_%28ACM%29_logo.svg.png">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Association_for_Computing_Machinery_%28ACM%29_logo.svg">
                 </div>
                 <div class="activity-title">Association for Computing Machinery Club</div>
                 <div class="date">SEPTEMBER, 2017 - PRESENT</div>
@@ -601,37 +654,6 @@
                             </ul>
                         </li>
                         <li>
-                            <div class="course">Operating Systems</div>
-                            <ul class="projects">
-                                <li>
-                                    <div class="project-title">
-                                        <a href="https://github.com/byliuyang/virusCounter">virusCounter</a>
-                                    </div>
-                                    <div class="project-description">
-                                        Active virus detector
-                                    </div>
-                                    <div class="project-implementation">
-                                        Designed a <a>loadable kernel module</a> in <a>C</a>,
-                                        intercepted <a>system calls</a> and monitored <a>open, read, and write</a>
-                                        operations.
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="course">Tools & Techniques in Computer Network Security</div>
-                            <ul class="projects">
-                                <li>
-                                    <div class="project-title">
-                                        <a href="https://github.com/byliuyang/netGuard">netGuard</a>
-                                    </div>
-                                    <div class="project-description">
-                                        DNS capability based Anti-DDOS system
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
                             <div class="course">Software Engineering</div>
                             <ul class="projects">
                                 <li>
@@ -652,65 +674,7 @@
                             </ul>
                         </li>
                         <li>
-                            <div class="course">Computer Networks</div>
-                            <ul class="projects">
-                                <li>
-                                    <div class="project-title">
-                                        <a href="https://github.com/byliuyang/harryHttpd">harryHttpd</a>
-                                    </div>
-                                    <div class="project-description">
-                                        Maltreated high performance HTTP server
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="course">Intro to Artificial Intelligence</div>
-                            <ul class="projects">
-                                <li>
-                                    <div class="project-title">
-                                        <a href="https://github.com/byliuyang/connect-n-ai">Connect N</a>
-                                    </div>
-                                    <div class="project-description">
-                                        AI for connect-N game
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="course">Object-oriented Analysis & Design</div>
-                            <ul class="projects">
-                                <li>
-                                    <div class="project-title">
-                                        <a href="https://github.com/byliuyang/xiangqi">Xiangqi</a>
-                                    </div>
-                                    <div class="project-description">
-                                        Multi-version & multi-player Chinese Chess game
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="course">Advanced Computer Networks</div>
-                            <ul class="projects">
-                                <li>
-                                    <div class="project-title">
-                                        <a href="https://github.com/byliuyang/SuperSDN">superSDN</a>
-                                    </div>
-                                    <div class="project-description">
-                                        OpenFlow based network assets projector
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="course">Intro to Machine Organization & Assembly Language</li>
-                        <li class="course">Database Systems</li>
-                        <li class="course">Programming Languages</li>
-                        <li class="course">Computer Graphics</li>
-                        <li class="course">Algorithms</li>
-                        <li class="course">Analysis of Algorithms</li>
-                        <li>
-                            <div class="course">Computer Vision *</div>
+                            <div class="course">Computer Vision</div>
                             <ul class="projects">
                                 <li>
                                     <div class="project-thumbnail">
@@ -729,7 +693,96 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="course">Mobile & Ubiquitous Computing *</li>
+                        <li>
+                            <div class="course">Operating Systems</div>
+                            <!--<ul class="projects">-->
+                                <!--<li>-->
+                                    <!--<div class="project-title">-->
+                                        <!--<a href="https://github.com/byliuyang/virusCounter">virusCounter</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="project-description">-->
+                                        <!--Active virus detector-->
+                                    <!--</div>-->
+                                    <!--<div class="project-implementation">-->
+                                        <!--Designed a <a>loadable kernel module</a> in <a>C</a>,-->
+                                        <!--intercepted <a>system calls</a> and monitored <a>open, read, and write</a>-->
+                                        <!--operations.-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        </li>
+                        <li>
+                            <div class="course">Tools & Techniques in Computer Network Security</div>
+                            <!--<ul class="projects">-->
+                                <!--<li>-->
+                                    <!--<div class="project-title">-->
+                                        <!--<a href="https://github.com/byliuyang/netGuard">netGuard</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="project-description">-->
+                                        <!--DNS capability based Anti-DDOS system-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        </li>
+                        <li>
+                            <div class="course">Computer Networks</div>
+                            <!--<ul class="projects">-->
+                                <!--<li>-->
+                                    <!--<div class="project-title">-->
+                                        <!--<a href="https://github.com/byliuyang/harryHttpd">harryHttpd</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="project-description">-->
+                                        <!--Maltreated high performance HTTP server-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        </li>
+                        <li>
+                            <div class="course">Intro to Artificial Intelligence</div>
+                            <!--<ul class="projects">-->
+                                <!--<li>-->
+                                    <!--<div class="project-title">-->
+                                        <!--<a href="https://github.com/byliuyang/connect-n-ai">Connect N</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="project-description">-->
+                                        <!--AI for connect-N game-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        </li>
+                        <li>
+                            <div class="course">Object-oriented Analysis & Design</div>
+                            <!--<ul class="projects">-->
+                                <!--<li>-->
+                                    <!--<div class="project-title">-->
+                                        <!--<a href="https://github.com/byliuyang/xiangqi">Xiangqi</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="project-description">-->
+                                        <!--Multi-version & multi-player Chinese Chess game-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        </li>
+                        <li>
+                            <div class="course">Advanced Computer Networks</div>
+                            <!--<ul class="projects">-->
+                                <!--<li>-->
+                                    <!--<div class="project-title">-->
+                                        <!--<a href="https://github.com/byliuyang/SuperSDN">superSDN</a>-->
+                                    <!--</div>-->
+                                    <!--<div class="project-description">-->
+                                        <!--OpenFlow based network assets projector-->
+                                    <!--</div>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        </li>
+                        <li class="course">Intro to Machine Organization & Assembly Language</li>
+                        <li class="course">Database Systems</li>
+                        <li class="course">Programming Languages</li>
+                        <li class="course">Computer Graphics</li>
+                        <li class="course">Algorithms</li>
+                        <li class="course">Analysis of Algorithms</li>
+                        <li class="course">Mobile & Ubiquitous Computing</li>
                         <li class="course">Machine Learning *</li>
                     </ul>
                 </div>
@@ -799,7 +852,7 @@
                         <li class="course">Advanced Android App Development</li>
                         <li class="course">Into to iOS App Development with Swift</li>
                         <li class="course">Intro to Machine Learning</li>
-                        <li class="course">Intro to Self-driving Car Nanodegree *</li>
+                        <li class="course">Intro to Self-driving Car Nanodegree</li>
                         <li class="course">Machine Learning *</li>
                         <li class="course">Intro Computer Vision *</li>
                     </ul>
@@ -830,7 +883,7 @@
         <ul class="books">
             <li>
                 <div class="book">
-                    <img src="http://eloquentjavascript.net/img/cover.png">
+                    <img src="http://eloquentjavascript.net/img/cover.jpg">
                 </div>
                 <div>
                     <a href="http://eloquentjavascript.net">Eloquent Javascript</a>
@@ -850,6 +903,14 @@
                 </div>
                 <div>
                     <a href="https://survivejs.com/react">SurviveJs: React</a>
+                </div>
+            </li>
+            <li>
+                <div class="book">
+                    <img src="assets/images/book-covers/grid-layout.png">
+                </div>
+                <div>
+                    <a href="https://abookapart.com/products/get-ready-for-css-grid-layout">Get Ready for CSS Grid Layout</a>
                 </div>
             </li>
             <li>
@@ -926,6 +987,14 @@
                 <div>
                     <a href="https://cs.brown.edu/courses/cs173/2012/book">Programming Languages: Application and
                         Interpretation</a>
+                </div>
+            </li>
+            <li>
+                <div class="book">
+                    <img src="assets/images/book-covers/modern-compiler.png">
+                </div>
+                <div>
+                    <a href="https://www.amazon.com/Modern-Compiler-Implementation-Andrew-Appel/dp/052182060X">Modern Compiler Implementation in Java</a>
                 </div>
             </li>
             <li>

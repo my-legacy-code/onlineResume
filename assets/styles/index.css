@@ -126,7 +126,7 @@ and (-webkit-min-device-pixel-ratio : 2) {
         padding-right : 20px;
     }
 
-    .school-logo, .activity-logo, .company-logo {
+    .platform-logo, .school-logo, .activity-logo, .company-logo {
         display : none;
     }
 
@@ -206,7 +206,7 @@ and (min-device-width : 1024px) {
         width : 50%;
     }
 
-    #education-pane > ul, #experiences-pane > ul, #activities-pane > ul {
+    #contributions-pane > ul, #education-pane > ul, #experiences-pane > ul, #activities-pane > ul {
         margin-left : -100px;
     }
 
@@ -396,6 +396,7 @@ a {
 }
 
 .social-media {
+    position: relative;
     padding-left : 0;
     margin-top   : 28px;
     list-style   : none;
@@ -405,6 +406,15 @@ a {
 
 .social-media > li:not(:last-child) {
     margin-right : 60px;
+}
+
+.social-media .devpost-icon {
+    padding-top: 20px;
+    height: 48px;
+}
+
+#contributions-pane > ul {
+    padding-left : 0;
 }
 
 #contact-pane {
@@ -457,7 +467,7 @@ a {
     color      : #2079c7;
 }
 
-.school-info, .company-info {
+.platform-info, .school-info, .company-info {
     display : flex;
 }
 
@@ -471,7 +481,7 @@ a {
     margin-bottom : 20px;
 }
 
-.school-logo, .company-logo, .activity-logo {
+.platform-logo, .school-logo, .company-logo, .activity-logo {
     margin-right : 20px;
 }
 
@@ -483,7 +493,7 @@ a {
     float : left;
 }
 
-.school-logo > img, .company-logo > img, .activity-logo > img {
+.platform-logo > img, .school-logo > img, .company-logo > img, .activity-logo > img {
     width : 80px;
 }
 
@@ -504,6 +514,13 @@ a {
 .project-title > a {
     color           : black;
     text-decoration : none;
+}
+
+.project-achievement {
+    color         : black;
+    margin-bottom : 10px;
+    text-align    : center;
+    font-weight   : bold;
 }
 
 .project-title > a:hover {
@@ -562,7 +579,6 @@ a {
 }
 
 .project-description {
-    color         : black;
     text-align    : center;
     font-size     : 0.9rem;
     margin-bottom : 10px;
@@ -624,14 +640,8 @@ a {
     font-weight : bold;
 }
 
-#achievements-pane, #favorite-boos-pane {
+#contributions-pane, #favorite-boos-pane {
     margin-top : 50px;
-}
-
-#achievements-pane ul {
-    padding-left : 0;
-    font-weight  : bold;
-    font-size    : 16px;
 }
 
 .photo-gallery {
@@ -704,6 +714,16 @@ a {
 
 .photo-gallery.shown > li:nth-child(4):hover {
     transform : scale(0.8) translateY(-75px) translateX(80px) rotateX(-2deg);
+}
+
+#github-calender {
+    padding : 40px;
+    width   : 676px;
+    border  : 1px solid #DDDDDD;
+}
+
+#github-calender > h2 {
+    display : none;
 }
 
 footer > ul {
