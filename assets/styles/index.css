@@ -126,7 +126,11 @@ and (-webkit-min-device-pixel-ratio : 2) {
         padding-right : 20px;
     }
 
-    .platform-logo, .school-logo, .activity-logo, .company-logo {
+    #contributions-pane {
+        display: none;
+    }
+
+    .school-logo, .activity-logo, .company-logo {
         display : none;
     }
 
@@ -137,6 +141,10 @@ and (-webkit-min-device-pixel-ratio : 2) {
     #contact-pane ul {
         flex-direction : column;
         text-align     : center;
+    }
+
+    #contact-pane > ul > li:not(:last-child) {
+        margin-right: 0;
     }
 
     .books > li {
