@@ -396,7 +396,7 @@ a {
 }
 
 .social-media {
-    position: relative;
+    position     : relative;
     padding-left : 0;
     margin-top   : 28px;
     list-style   : none;
@@ -409,8 +409,8 @@ a {
 }
 
 .social-media .devpost-icon {
-    padding-top: 20px;
-    height: 48px;
+    padding-top : 20px;
+    height      : 48px;
 }
 
 #contributions-pane > ul {
@@ -714,6 +714,14 @@ a {
 
 .photo-gallery.shown > li:nth-child(4):hover {
     transform : scale(0.8) translateY(-75px) translateX(80px) rotateX(-2deg);
+}
+
+#contact-pane a {
+    text-decoration : none;
+}
+
+#contact-pane a:hover {
+    text-decoration : underline;
 }
 
 #github-calender {
