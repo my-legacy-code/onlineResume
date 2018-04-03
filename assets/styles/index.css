@@ -279,7 +279,7 @@ and (min-device-width : 1024px) {
     }
 
     .certificates, .projects {
-        grid-auto-columns : 40% 10% 40%;
+        grid-auto-columns : 45% 10% 45%;
     }
 
     .certificate.second, .project.second, .books > .second {
