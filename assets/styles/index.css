@@ -488,6 +488,10 @@ a {
     padding-left : 0;
 }
 
+.company-info > div:last-child {
+    width: 100%;
+}
+
 .school-info > div > ul > li:not(:last-child) {
     margin-bottom : 20px;
 }
