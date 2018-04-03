@@ -134,10 +134,6 @@ and (-webkit-min-device-pixel-ratio : 2) {
         display : none;
     }
 
-    .projects > li {
-        width : 100%;
-    }
-
     #contact-pane ul {
         flex-direction : column;
         text-align     : center;
@@ -147,12 +143,17 @@ and (-webkit-min-device-pixel-ratio : 2) {
         margin-right : 0;
     }
 
-    .books > li {
-        width : 100%;
-    }
-
     #biography-pane > .center {
         padding : 148px 0 60px 0;
+    }
+
+    .certificates, .projects, .books {
+        grid-auto-columns : 100%;
+    }
+
+    .certificate.second, .project.second, .books > .second, .books > .third, .books > .forth {
+        grid-column-start : 1;
+        grid-column-end   : 2;
     }
 }
 
@@ -202,14 +203,6 @@ and (min-device-width : 1024px) {
         font-size : 20px;
     }
 
-    .projects > li {
-        width : 40%;
-    }
-
-    .projects > li:nth-child(odd) {
-        margin-right : 10%;
-    }
-
     .project-thumbnail-mobile {
         width : 50%;
     }
@@ -220,11 +213,6 @@ and (min-device-width : 1024px) {
 
     .project-thumbnail {
         height : 210px;
-    }
-
-    .books > li {
-        width        : 20%;
-        margin-right : 5%;
     }
 
     .book:hover {
@@ -284,6 +272,29 @@ and (min-device-width : 1024px) {
 
     #biography-pane > .center {
         padding : 104px 0 60px 0;
+    }
+
+    .books {
+        grid-auto-columns : 20% 6% 20% 6% 20% 6% 20%;
+    }
+
+    .certificates, .projects {
+        grid-auto-columns : 40% 10% 40%;
+    }
+
+    .certificate.second, .project.second, .books > .second {
+        grid-column-start : 3;
+        grid-column-end   : 4;
+    }
+
+    .books > .third {
+        grid-column-start : 5;
+        grid-column-end   : 6;
+    }
+
+    .books > .forth {
+        grid-column-start : 7;
+        grid-column-end   : 8;
     }
 }
 
@@ -497,18 +508,8 @@ a {
     width : 80px;
 }
 
-.projects, .books {
-    padding-left : 0;
-    display      : flex;
-    flex-wrap    : wrap;
-}
-
 .projects {
     margin-top : 20px;
-}
-
-.projects > li {
-    margin-bottom : 50px;
 }
 
 .project-title > a {
@@ -598,8 +599,7 @@ a {
 }
 
 .books > li {
-    text-align    : center;
-    margin-bottom : 40px;
+    text-align : center;
 }
 
 .books > li > div:first-child {
@@ -755,24 +755,19 @@ a {
     margin-top : 0;
 }
 
-.certificates {
-    display           : grid;
-    grid-auto-columns : 40% 10% 40%;
-    grid-auto-rows    : auto;
-    grid-row-gap      : 50px;
+.certificates, .projects, .books {
+    padding-left   : 0;
+    display        : grid;
+    grid-auto-rows : auto;
+    grid-row-gap   : 50px;
 }
 
-.certificate.first {
+.certificate.first, .project.first, .books > .first {
     grid-column-start : 1;
     grid-column-end   : 2;
 }
 
-.certificate.second {
-    grid-column-start : 3;
-    grid-column-end   : 4;
-}
-
-.certificate > .thumbnail {
+.certificate > .thumbnail, .project-thumbnail {
     box-shadow    : 0 0 6px rgba(0, 0, 0, 0.2);
     margin-bottom : 20px;
 }

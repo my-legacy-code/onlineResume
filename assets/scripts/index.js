@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     let paneWrapper = document.querySelector('#pane-wrapper');
     let hiddenPanes = document.querySelector('#hidden-panes');
 
-    function showPane(paneId) {
+    function showPane(paneId, scrollTo = true) {
 
         function displayNewPane() {
             let pane = hiddenPanes.querySelector(`#${paneId}`);
@@ -43,10 +43,14 @@ window.addEventListener('load', () => {
 
             $(paneWrapper)
                 .animate({
-                    opacity:1
-                }, 500, 'swing', ()=>{
+                    opacity: 1
+                }, 500, 'swing');
 
-                });
+            if(scrollTo) {
+                $('html, body').animate({
+                    scrollTop: $("#pane-wrapper").offset().top
+                }, 500);
+            }
         }
 
         let currentPane = paneWrapper.querySelector('.active-pane');
@@ -85,5 +89,5 @@ window.addEventListener('load', () => {
 
     GitHubCalendar('#github-calender', GITHUB_USERNAME);
 
-    showPane('experiences-pane');
+    showPane('experiences-pane', false);
 });
