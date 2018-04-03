@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
             $(paneWrapper)
                 .animate({
                     opacity: 1
-                }, 500, 'swing');
+                }, 200, 'swing');
 
 
 
@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
             $(paneWrapper)
                 .animate({
                     opacity: 0
-                }, 500, 'swing', () => {
+                }, 200, 'swing', () => {
                     hiddenPanes.appendChild(currentPane);
                     displayNewPane();
                 });

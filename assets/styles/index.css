@@ -437,9 +437,10 @@ a {
     padding-left : 0;
 }
 
-#contact-pane {
+#contact-pane, #copyright-pane, #source-code-pane  {
     font-size : 14px;
     color     : #555555;
+    justify-content : center;
 }
 
 #contact-pane ul {
@@ -453,11 +454,12 @@ a {
     margin-right : 30px;
 }
 
-#copyright-pane {
-    font-size  : 14px;
-    text-align : center;
-    margin     : 10px 0 20px 0;
-    color      : #555555;
+#source-code-pane , #copyright-pane {
+    margin     : 10px 0 0 0;
+}
+
+#analytics-pane {
+    margin-top: 20px;
 }
 
 #education-pane {
