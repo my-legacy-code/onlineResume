@@ -34,6 +34,9 @@ window.addEventListener('load', () => {
 
     let paneWrapper = document.querySelector('#pane-wrapper');
     let hiddenPanes = document.querySelector('#hidden-panes');
+    let header = document.querySelector('header');
+    const TITLE_MARGIN = 20;
+    const TOP_OFFSET = $(header).height() + TITLE_MARGIN;
 
     function showPane(paneId, scrollTo = true) {
 
@@ -46,9 +49,12 @@ window.addEventListener('load', () => {
                     opacity: 1
                 }, 500, 'swing');
 
+
+
+
             if(scrollTo) {
                 $('html, body').animate({
-                    scrollTop: $("#pane-wrapper").offset().top
+                    scrollTop: $("#pane-wrapper").offset().top - TOP_OFFSET
                 }, 500);
             }
         }
