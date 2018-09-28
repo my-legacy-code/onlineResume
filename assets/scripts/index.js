@@ -93,7 +93,35 @@ window.addEventListener('load', () => {
         });
     });
 
-    GitHubCalendar('#github-calender', GITHUB_USERNAME);
+    let githubStats = Object.create(GithubStats);
+    githubStats.init(GITHUB_USERNAME)
+        .then(() => {
+            document.querySelector('#github-calender')
+                .appendChild(githubStats.contributionsSvg({
+                    levelColors: [
+                        {
+                            minCommits: 0,
+                            color: '#ebedf0'
+                        },
+                        {
+                            minCommits: 1,
+                            color: '#c6e48b'
+                        },
+                        {
+                            minCommits: 9,
+                            color: '#7bc96f'
+                        },
+                        {
+                            minCommits: 17,
+                            color: '#239a3b'
+                        },
+                        {
+                            minCommits: 26,
+                            color: '#196127'
+                        }
+                    ]
+                }));
+        });
 
     showPane('experiences-pane', false);
 });

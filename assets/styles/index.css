@@ -738,14 +738,7 @@ a {
 }
 
 #github-calender {
-    padding          : 40px;
-    width            : 676px;
-    border           : 1px solid #DDDDDD;
-    background-color : rgb(250, 250, 250);
-}
-
-#github-calender > h2 {
-    display : none;
+    font-size: 0;
 }
 
 #hidden-panes {
