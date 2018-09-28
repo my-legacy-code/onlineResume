@@ -1,7 +1,7 @@
 let GithubStats = {
     init: function (username) {
         return new Promise((resolve, reject) => {
-            fetch(`http://urlreq.appspot.com/req?method=GET&url=https://github.com/${username}`)
+            fetch(`https://urlreq.appspot.com/req?method=GET&url=https://github.com/${username}`)
                 .then(response => {
                     if (response.status !== 200) {
                         reject(response.statusText);
