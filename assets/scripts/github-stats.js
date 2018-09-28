@@ -37,7 +37,7 @@ let GithubStats = {
         const rows = config.rows || 7;
         const space = config.space || 2;
         const rectWidth = config.rectWidth || 12;
-        console.log(config.levelColors);
+
         const levelColors = config.levelColors || [
             {
                 minCommits: 0,
