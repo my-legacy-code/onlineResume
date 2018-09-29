@@ -2,460 +2,460 @@ html {
 }
 
 body {
-    padding     : 0;
-    margin      : 0;
-    font-family : 'Roboto', sans-serif;
-    line-height : 1.5;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
 }
 
 body.show-message #main-content {
-    margin-top : 44px;
+    margin-top: 44px;
 }
 
 body.show-message header {
-    top : 44px;
+    top: 44px;
 }
 
 .flash-message {
-    position         : fixed;
-    top              : 0;
-    left             : 0;
-    right            : 0;
-    background-color : #FFC107;
-    text-align       : center;
-    font-weight      : bolder;
-    z-index          : 100;
-    transition       : all 600ms cubic-bezier(0.19, 1, 0.22, 1);
-    overflow         : hidden;
-    height           : 44px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFC107;
+    text-align: center;
+    font-weight: bolder;
+    z-index: 100;
+    transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
+    height: 44px;
 }
 
 .flash-message .container {
-    padding-top    : 10px;
-    padding-bottom : 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .flash-message.hide {
-    height : 0;
+    height: 0;
 }
 
 #close-message-btn {
-    margin-right : 10px;
-    position     : absolute;
-    right        : 0;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
 }
 
 header {
-    top              : 0;
-    position         : fixed;
-    z-index          : 100;
-    left             : 0;
-    width            : 100%;
-    background-color : rgba(0, 0, 0, 0.8);
-    box-shadow       : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition       : all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 @media only screen
-and (max-device-width : 1023px)
-and (-webkit-min-device-pixel-ratio : 2) {
+and (max-device-width: 1023px)
+and (-webkit-min-device-pixel-ratio: 2) {
     header nav ul {
-        flex-direction : column;
+        flex-direction: column;
     }
 
     header nav {
-        overflow   : hidden;
-        transition : all 600ms cubic-bezier(1, 0, 0, 1);
-        height     : 0;
+        overflow: hidden;
+        transition: all 600ms cubic-bezier(1, 0, 0, 1);
+        height: 0;
     }
 
     header nav ul li:hover {
-        background-color : rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
     header nav ul li {
-        display         : flex;
-        flex-direction  : row;
-        justify-content : center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     header nav ul li div:first-child {
-        margin-right : 20px;
+        margin-right: 20px;
     }
 
     #logo {
-        text-align : center;
-        padding    : 8px 0;
+        text-align: center;
+        padding: 8px 0;
     }
 
     #biography-pane > .center {
-        flex-direction : column;
+        flex-direction: column;
     }
 
     #biography-profile-container {
-        text-align : center;
+        text-align: center;
     }
 
     #biography-intro-container {
-        width        : 300px;
-        margin-left  : auto;
-        margin-right : auto;
-        margin-top   : 40px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
     }
 
     #biography-who-i-am {
-        font-size : 24px;
+        font-size: 24px;
     }
 
     #biography-skills-container {
-        font-size : 16px;
+        font-size: 16px;
     }
 
     .menu {
-        margin-top : 4px;
-        cursor     : pointer;
-        display    : block;
-        position   : absolute;
-        right      : 10px;
-        top        : 10px;
-        color      : white;
+        margin-top: 4px;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: white;
     }
 
     #main-content > li:not(:first-child), #pane-wrapper {
-        padding-left  : 20px;
-        padding-right : 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     #contributions-pane {
-        display : none;
+        display: none;
     }
 
     .school-logo, .activity-logo, .company-logo {
-        display : none;
+        display: none;
     }
 
     #contact-pane ul {
-        flex-direction : column;
-        text-align     : center;
+        flex-direction: column;
+        text-align: center;
     }
 
     #contact-pane > ul > li:not(:last-child) {
-        margin-right : 0;
+        margin-right: 0;
     }
 
     #biography-pane > .center {
-        padding : 148px 0 60px 0;
+        padding: 148px 0 60px 0;
     }
 
     .certificates, .projects, .books {
-        grid-auto-columns : 100%;
+        grid-auto-columns: 100%;
     }
 
     .certificate.second, .project.second, .books > .second, .books > .third, .books > .forth {
-        grid-column-start : 1;
-        grid-column-end   : 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
     }
 }
 
 @media only screen
-and (min-device-width : 1024px) {
+and (min-device-width: 1024px) {
     .center {
-        margin-left  : auto;
-        margin-right : auto;
-        width        : 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1024px;
     }
 
     #logo {
-        margin-left  : auto;
-        margin-right : auto;
+        margin-left: auto;
+        margin-right: auto;
 
-        padding      : 4px 0 0 0;
+        padding: 4px 0 0 0;
     }
 
     header nav {
-        flex        : 1;
-        margin-left : 40px;
-        height      : 44px;
-        overflow    : hidden;
+        flex: 1;
+        margin-left: 40px;
+        height: 44px;
+        overflow: hidden;
     }
 
     header nav ul li {
-        margin-top : -44px;
+        margin-top: -44px;
     }
 
     .menu {
-        display : none;
+        display: none;
     }
 
     header .center {
-        display : flex;
+        display: flex;
     }
 
     #biography-intro-container {
-        padding : 40px 0 0 80px;
+        padding: 40px 0 0 80px;
     }
 
     #biography-who-i-am {
-        font-size : 40px;
+        font-size: 40px;
     }
 
     #biography-skills-container {
-        font-size : 20px;
+        font-size: 20px;
     }
 
     .project-thumbnail-mobile {
-        width : 50%;
+        width: 50%;
     }
 
     #contributions-pane > ul, #education-pane > ul, #experiences-pane > ul, #activities-pane > ul {
-        margin-left : -100px;
+        margin-left: -100px;
     }
 
     .project-thumbnail {
-        height : 210px;
+        height: 210px;
     }
 
     .book:hover {
-        cursor    : pointer;
-        transform : perspective(100px) rotateY(-3deg);
+        cursor: pointer;
+        transform: perspective(100px) rotateY(-3deg);
     }
 
     .book, .book:hover:before, .book:hover:after {
-        transition : all 100ms ease-in-out;
+        transition: all 100ms ease-in-out;
     }
 
     .book:hover > img {
-        box-shadow : -2px 0 4px rgba(0, 0, 0, 0.1);
+        box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
     }
 
     .book:hover:before, .book:hover:after {
-        position : absolute;
-        top      : 2%;
-        height   : 96%;
-        content  : ' ';
-        z-index  : -1;
+        position: absolute;
+        top: 2%;
+        height: 96%;
+        content: ' ';
+        z-index: -1;
     }
 
     .book:hover::before {
-        width            : 100%;
-        left             : 7%;
-        background-color : black;
-        box-shadow       : 5px 5px 16px #333;
+        width: 100%;
+        left: 7%;
+        background-color: black;
+        box-shadow: 5px 5px 16px #333;
     }
 
     .book:hover::after {
-        width             : 5%;
-        left              : 99%;
-        background-color  : #efefef;
-        box-shadow        : inset 0 0 5px #aaa;
-        -webkit-transform : perspective(100px) rotateY(20deg);
+        width: 5%;
+        left: 99%;
+        background-color: #efefef;
+        box-shadow: inset 0 0 5px #aaa;
+        -webkit-transform: perspective(100px) rotateY(20deg);
     }
 
     .project-thumbnail:hover {
-        transform  : scale(1.05);
-        cursor     : pointer;
-        box-shadow : 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        transform: scale(1.05);
+        cursor: pointer;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
 
     .project-thumbnail-mobile:hover {
-        transform : scale(1.05);
-        cursor    : pointer;
+        transform: scale(1.05);
+        cursor: pointer;
     }
 
     #activities-pane .projects {
-        margin-left : 100px;
+        margin-left: 100px;
     }
 
     .activity-title {
-        margin-left : 100px;
+        margin-left: 100px;
     }
 
     #biography-pane > .center {
-        padding : 104px 0 60px 0;
+        padding: 104px 0 60px 0;
     }
 
     .books {
-        grid-auto-columns : 20% 6% 20% 6% 20% 6% 20%;
+        grid-auto-columns: 20% 6% 20% 6% 20% 6% 20%;
     }
 
     .certificates, .projects {
-        grid-auto-columns : 45% 10% 45%;
+        grid-auto-columns: 45% 10% 45%;
     }
 
     .certificate.second, .project.second, .books > .second {
-        grid-column-start : 3;
-        grid-column-end   : 4;
+        grid-column-start: 3;
+        grid-column-end: 4;
     }
 
     .books > .third {
-        grid-column-start : 5;
-        grid-column-end   : 6;
+        grid-column-start: 5;
+        grid-column-end: 6;
     }
 
     .books > .forth {
-        grid-column-start : 7;
-        grid-column-end   : 8;
+        grid-column-start: 7;
+        grid-column-end: 8;
     }
 }
 
 #logo {
-    font-size : 25px;
-    color     : white;
+    font-size: 25px;
+    color: white;
 }
 
 ul {
-    list-style : none;
+    list-style: none;
 }
 
 header nav ul {
-    margin     : 0;
-    padding    : 0;
-    display    : flex;
-    list-style : none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
 }
 
 header nav ul li {
-    text-align : center;
-    color      : rgba(255, 255, 255, 0.7);
-    transition : all 600ms cubic-bezier(1, 0, 0, 1);
-    flex       : 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 600ms cubic-bezier(1, 0, 0, 1);
+    flex: 1;
 }
 
 header nav ul li {
-    text-decoration : none;
+    text-decoration: none;
 }
 
 header nav ul li div:first-child {
-    font-size : 0;
-    padding   : 12px 0;
+    font-size: 0;
+    padding: 12px 0;
 }
 
 header nav ul li div:first-child > i {
-    font-size : 20px;
+    font-size: 20px;
 }
 
 header nav ul li div:last-child {
-    padding   : 13px 0;
-    font-size : 12px;
+    padding: 13px 0;
+    font-size: 12px;
 }
 
 header nav ul li:hover {
-    cursor     : pointer;
-    color      : rgba(255, 255, 255, 0.85);
-    margin-top : 0;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 0;
 }
 
 header nav ul li.active {
-    font-weight : 500;
-    color       : white;
+    font-weight: 500;
+    color: white;
 }
 
 #main-content {
-    position         : relative;
-    padding          : 0;
-    margin           : 0;
-    list-style       : none;
-    background-color : white;
-    transition       : all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: white;
+    transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 #biography-pane {
-    color           : white;
-    margin-bottom   : 50px;
-    text-shadow     : 0 0 10px rgba(0, 0, 0, 0.8);
-    background      : url("../images/bg.jpg") center;
-    background-size : cover;
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    background: url("../images/bg.jpg") center;
+    background-size: cover;
 }
 
 #biography-pane > .center {
-    display : flex;
+    display: flex;
 }
 
 #biography-intro-container {
-    flex         : 1;
-    word-spacing : 5px;
+    flex: 1;
+    word-spacing: 5px;
 }
 
 #biography-profile {
-    width      : 300px;
-    border     : 8px solid white;
-    box-shadow : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition : all 0.3s cubic-bezier(.25, .8, .25, 1);
+    width: 300px;
+    border: 8px solid white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 #biography-profile:hover {
-    cursor     : pointer;
-    transform  : scale(1.005);
-    box-shadow : 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transform: scale(1.005);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 #biography-who-i-am {
 }
 
 #biography-who-i-am .role {
-    font-weight : bold;
+    font-weight: bold;
 }
 
 #biography-skills-container {
-    margin-top  : 10px;
-    line-height : 1.5;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
 a {
-    color       : inherit;
-    font-weight : bolder;
+    color: inherit;
+    font-weight: bolder;
 }
 
 #biography-skills-container a {
-    text-decoration : none;
-    font-weight     : bold;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #biography-skills-container a:hover {
-    text-decoration : underline;
+    text-decoration: underline;
 }
 
 .social-media {
-    position     : relative;
-    padding-left : 0;
-    margin-top   : 28px;
-    list-style   : none;
-    display      : flex;
-    font-size    : 60px;
+    position: relative;
+    padding-left: 0;
+    margin-top: 28px;
+    list-style: none;
+    display: flex;
+    font-size: 60px;
 }
 
 .social-media > li:not(:last-child) {
-    margin-right : 60px;
+    margin-right: 60px;
 }
 
 .social-media .devpost-icon {
-    padding-top : 20px;
-    height      : 48px;
+    padding-top: 20px;
+    height: 48px;
 }
 
 #contributions-pane > ul {
-    padding-left : 0;
+    padding-left: 0;
 }
 
-#contact-pane, #copyright-pane, #source-code-pane  {
-    font-size : 14px;
-    color     : #555555;
-    justify-content : center;
+#contact-pane, #copyright-pane, #source-code-pane {
+    font-size: 14px;
+    color: #555555;
+    justify-content: center;
 }
 
 #contact-pane ul {
-    padding-left    : 0;
-    list-style      : none;
-    display         : flex;
-    justify-content : center;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 #contact-pane li:not(:last-child) {
-    margin-right : 30px;
+    margin-right: 30px;
 }
 
-#source-code-pane , #copyright-pane {
-    margin     : 10px 0 0 0;
+#source-code-pane, #copyright-pane {
+    margin: 10px 0 0 0;
 }
 
 #analytics-pane {
@@ -463,31 +463,31 @@ a {
 }
 
 #education-pane {
-    margin : 0 auto;
+    margin: 0 auto;
 }
 
 #education-pane > ul, #experiences-pane > ul {
-    list-style   : none;
-    padding-left : 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 #education-pane > ul > li:not(:last-child), #experiences-pane > ul > li:not(:last-child) {
-    margin-bottom : 20px;
+    margin-bottom: 20px;
 }
 
 #main-content > li > h1 {
-    margin-top : 0;
-    color      : #2079c7;
+    margin-top: 0;
+    color: #2079c7;
 }
 
 .platform-info, .school-info, .company-info {
-    display : flex;
+    display: flex;
 }
 
 .school-info > div > ul {
-    color        : #666;
-    margin-top   : 20px;
-    padding-left : 0;
+    color: #666;
+    margin-top: 20px;
+    padding-left: 0;
 }
 
 .company-info > div:last-child {
@@ -495,246 +495,246 @@ a {
 }
 
 .school-info > div > ul > li:not(:last-child) {
-    margin-bottom : 20px;
+    margin-bottom: 20px;
 }
 
 .platform-logo, .school-logo, .company-logo, .activity-logo {
-    margin-right : 20px;
+    margin-right: 20px;
 }
 
 #activities-pane > ul {
-    padding-left : 0;
+    padding-left: 0;
 }
 
 .activity-logo {
-    float : left;
+    float: left;
 }
 
 .platform-logo > img, .school-logo > img, .company-logo > img, .activity-logo > img {
-    width : 80px;
+    width: 80px;
 }
 
 .projects {
-    margin-top : 20px;
+    margin-top: 20px;
 }
 
 .project-title > a {
-    color           : black;
-    text-decoration : none;
+    color: black;
+    text-decoration: none;
 }
 
 .project-achievement {
-    color         : black;
-    margin-bottom : 10px;
-    text-align    : center;
-    font-weight   : bold;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .project-title > a:hover {
-    text-decoration : underline;
+    text-decoration: underline;
 }
 
 .project-thumbnail {
-    width : 100%;
+    width: 100%;
 }
 
 .project-thumbnail-mobile {
-    width : 50%;
+    width: 50%;
 }
 
 .project-thumbnail, .project-thumbnail-mobile {
-    position         : relative;
-    background-color : white;
-    transition       : all 0.3s cubic-bezier(.25, .8, .25, 1);
-    margin-bottom    : 20px;
-    font-size        : 0;
-    box-shadow       : 0 0 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background-color: white;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    margin-bottom: 20px;
+    font-size: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 .project-thumbnail {
-    display     : flex;
-    overflow    : hidden;
-    align-items : center;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
 }
 
 .project-thumbnail.show-top {
-    align-items : baseline;
+    align-items: baseline;
 }
 
 .project-thumbnail-mobile {
-    margin-left  : auto;
-    margin-right : auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-thumbnail-mobile > img {
-    margin-left  : auto;
-    margin-right : auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-thumbnail > img, .project-thumbnail-mobile > img {
-    height : auto;
-    width  : 100%;
+    height: auto;
+    width: 100%;
 }
 
 .project-winner {
-    position            : absolute;
-    top                 : 0;
-    left                : 0;
-    background-image    : url("../images/winner.svg");
-    background-size     : contain;
-    background-position : left top;
-    background-repeat   : no-repeat;
-    width               : 120px;
-    height              : 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/winner.svg");
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
 }
 
 .project-title {
-    text-align : center;
+    text-align: center;
 }
 
 .project-description {
-    text-align    : center;
-    font-size     : 0.9rem;
-    margin-bottom : 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
 .project-implementation {
-    color       : #666;
-    line-height : 1.5;
-    font-size   : 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 .books > li {
-    text-align : center;
+    text-align: center;
 }
 
 .books > li > div:first-child {
-    margin-bottom : 20px;
+    margin-bottom: 20px;
 }
 
 .book > img {
-    width      : 100%;
+    width: 100%;
 
-    box-shadow : 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition : all 300ms ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms ease-in-out;
 }
 
 .important {
-    font-weight : bold;
+    font-weight: bold;
 }
 
 .date {
-    color     : #666666;
-    font-size : 12px;
+    color: #666666;
+    font-size: 12px;
 }
 
 .description {
-    color     : #666666;
-    font-size : 14px;
+    color: #666666;
+    font-size: 14px;
 }
 
 .book {
-    font-size : 0;
-    position  : relative;
+    font-size: 0;
+    position: relative;
 }
 
 .course {
-    font-size : 14px;
-    color     : black;
+    font-size: 14px;
+    color: black;
 }
 
 #activities-pane > ul > li {
-    margin-bottom : 20px;
-    min-height    : 80px;
+    margin-bottom: 20px;
+    min-height: 80px;
 }
 
 .activity-title {
-    font-size   : 16px;
-    font-weight : bold;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 #contributions-pane {
-    margin-bottom : 50px;
+    margin-bottom: 50px;
 }
 
 .photo-gallery {
-    perspective   : 500px;
-    padding-left  : 0;
-    position      : relative;
-    height        : 210px;
-    margin-bottom : 20px;
+    perspective: 500px;
+    padding-left: 0;
+    position: relative;
+    height: 210px;
+    margin-bottom: 20px;
 }
 
 .photo-gallery > li {
-    position         : absolute;
-    background-color : white;
+    position: absolute;
+    background-color: white;
 }
 
 .photo-gallery > li:nth-child(1) {
-    z-index    : 4;
-    transition : all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 4;
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .photo-gallery > li:nth-child(2) {
-    transform  : scale(0.99);
-    z-index    : 3;
-    transition : all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale(0.99);
+    z-index: 3;
+    transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .photo-gallery > li:nth-child(3) {
-    transform  : scale(0.99);
-    transition : all 400ms cubic-bezier(0.19, 1, 0.22, 1);
-    z-index    : 2;
+    transform: scale(0.99);
+    transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 2;
 }
 
 .photo-gallery > li:nth-child(4) {
-    transform  : scale(0.99);
-    transition : all 400ms cubic-bezier(0.19, 1, 0.22, 1);
-    z-index    : 1;
+    transform: scale(0.99);
+    transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 1;
 }
 
 .photo-gallery:not(.shown) > li:first-child {
-    box-shadow : 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .photo-gallery.shown > li {
-    box-shadow : 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .photo-gallery.shown > li:nth-child(1) {
-    transform : scale(0.95) rotateX(-8deg);
+    transform: scale(0.95) rotateX(-8deg);
 }
 
 .photo-gallery.shown > li:nth-child(2) {
-    transform : scale(0.9) translateY(-25px) rotateX(-6deg);
+    transform: scale(0.9) translateY(-25px) rotateX(-6deg);
 }
 
 .photo-gallery.shown > li:nth-child(2):hover {
-    transform : scale(0.9) translateY(-25px) translateX(80px) rotateX(-6deg);
+    transform: scale(0.9) translateY(-25px) translateX(80px) rotateX(-6deg);
 }
 
 .photo-gallery.shown > li:nth-child(3) {
-    transform : scale(0.85) translateY(-50px) rotateX(-4deg);
+    transform: scale(0.85) translateY(-50px) rotateX(-4deg);
 }
 
 .photo-gallery.shown > li:nth-child(3):hover {
-    transform : scale(0.85) translateY(-50px) translateX(80px) rotateX(-4deg);
+    transform: scale(0.85) translateY(-50px) translateX(80px) rotateX(-4deg);
 }
 
 .photo-gallery.shown > li:nth-child(4) {
-    transform : scale(0.8) translateY(-75px) rotateX(-2deg);
+    transform: scale(0.8) translateY(-75px) rotateX(-2deg);
 }
 
 .photo-gallery.shown > li:nth-child(4):hover {
-    transform : scale(0.8) translateY(-75px) translateX(80px) rotateX(-2deg);
+    transform: scale(0.8) translateY(-75px) translateX(80px) rotateX(-2deg);
 }
 
 #contact-pane a {
-    text-decoration : none;
+    text-decoration: none;
 }
 
 #contact-pane a:hover {
-    text-decoration : underline;
+    text-decoration: underline;
 }
 
 #github-language-distribution {
@@ -743,51 +743,51 @@ a {
 }
 
 #hidden-panes {
-    display : none;
+    display: none;
 }
 
 #pane-wrapper {
-    list-style : none;
+    list-style: none;
 }
 
 #pane-wrapper h1 {
-    color      : #2079c7;
-    margin-top : 0;
+    color: #2079c7;
+    margin-top: 0;
 }
 
 .certificates, .projects, .books {
-    padding-left   : 0;
-    display        : grid;
-    grid-auto-rows : auto;
-    grid-row-gap   : 50px;
+    padding-left: 0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-row-gap: 50px;
 }
 
 .certificate.first, .project.first, .books > .first {
-    grid-column-start : 1;
-    grid-column-end   : 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 .certificate > .thumbnail, .project-thumbnail {
-    box-shadow    : 0 0 6px rgba(0, 0, 0, 0.2);
-    margin-bottom : 20px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .certificate > .thumbnail > img {
-    width : 100%;
+    width: 100%;
 }
 
 .certificate > .title {
-    text-align  : center;
-    font-weight : bolder;
+    text-align: center;
+    font-weight: bolder;
 }
 
 footer {
-    margin-top : 100px;
+    margin-top: 100px;
 }
 
 footer > ul {
-    text-align : center;
-    border-top : 1px solid #e6e6e6;
-    padding    : 60px 0;
-    margin     : 0;
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
+    padding: 60px 0;
+    margin: 0;
 }
