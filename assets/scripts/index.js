@@ -1,6 +1,4 @@
-window.addEventListener('load', () => {
-    const GITHUB_USERNAME = 'byliuyang';
-
+window.addEventListener('load', async () => {
     let menuBtn = document.querySelector('#menu-btn');
     let navEl = document.querySelector('#header nav');
     let menuEl = document.querySelector('#header nav > ul');
@@ -49,12 +47,9 @@ window.addEventListener('load', () => {
                     opacity: 1
                 }, 200, 'swing');
 
-
-
-
-            if(scrollTo) {
+            if (scrollTo) {
                 $('html, body').animate({
-                    scrollTop: $("#pane-wrapper").offset().top - TOP_OFFSET
+                    scrollTop: $('#pane-wrapper').offset().top - TOP_OFFSET
                 }, 500);
             }
         }
@@ -69,8 +64,6 @@ window.addEventListener('load', () => {
                     displayNewPane();
                 });
         } else displayNewPane();
-
-
     }
 
     document.querySelectorAll('[data-pane-id]')
@@ -93,7 +86,9 @@ window.addEventListener('load', () => {
         });
     });
 
-    const githubStatsConfig = {
+    const GITHUB_USERNAME = 'byliuyang';
+    const githubStats = await GithubStats(GITHUB_USERNAME);
+    let contributionsSVG = githubStats.contributionsSVG({
         rows: 7,
         space: 4,
         rectWidth: 16,
@@ -119,16 +114,19 @@ window.addEventListener('load', () => {
                 color: '#196127'
             }
         ]
-    };
+    });
+    let languageDistributionSVG = githubStats.languageDistributionSVG({
+        barHeight: 20,
+        lineSpacing: 4,
+        languageNameWidth: 100,
+        fontSize: 14
+    });
 
-    let githubStats = Object.create(GithubStats);
+    let githubContributions = document.querySelector('#github-contributions');
+    githubContributions.appendChild(contributionsSVG);
 
-    githubStats.init(GITHUB_USERNAME)
-        .then(() => {
-            let svg = githubStats.contributionsSvg(githubStatsConfig);
-            let githubCalender = document.querySelector('#github-calender');
-            githubCalender.appendChild(svg);
-        });
+    let githubLanguageDistribution = document.querySelector('#github-language-distribution');
+    githubLanguageDistribution.appendChild(languageDistributionSVG);
 
     showPane('experiences-pane', false);
 });

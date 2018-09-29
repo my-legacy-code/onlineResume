@@ -737,8 +737,9 @@ a {
     text-decoration : underline;
 }
 
-#github-calender {
-    font-size: 0;
+#github-language-distribution {
+    margin-top: 30px;
+    transform: translateX(-100px);
 }
 
 #hidden-panes {
