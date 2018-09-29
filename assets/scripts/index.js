@@ -86,47 +86,56 @@ window.addEventListener('load', async () => {
         });
     });
 
-    const GITHUB_USERNAME = 'byliuyang';
-    const githubStats = await GithubStats(GITHUB_USERNAME);
-    let contributionsSVG = githubStats.contributionsSVG({
-        rows: 7,
-        space: 4,
-        rectWidth: 16,
-        levelColors: [
-            {
-                minCommits: 0,
-                color: '#ebedf0'
-            },
-            {
-                minCommits: 1,
-                color: '#c6e48b'
-            },
-            {
-                minCommits: 9,
-                color: '#7bc96f'
-            },
-            {
-                minCommits: 17,
-                color: '#239a3b'
-            },
-            {
-                minCommits: 26,
-                color: '#196127'
-            }
-        ]
-    });
-    let languageDistributionSVG = githubStats.languageDistributionSVG({
-        barHeight: 20,
-        lineSpacing: 4,
-        languageNameWidth: 100,
-        fontSize: 14
-    });
+    (async () => {
+        const GITHUB_USERNAME = 'byliuyang';
+        const COMMITS_CONTAINER = '#github-contributions';
+        const LANGUAGES_CONTAINER = '#github-language-distribution';
 
-    let githubContributions = document.querySelector('#github-contributions');
-    githubContributions.appendChild(contributionsSVG);
+        const githubStats = await GithubStats(GITHUB_USERNAME);
 
-    let githubLanguageDistribution = document.querySelector('#github-language-distribution');
-    githubLanguageDistribution.appendChild(languageDistributionSVG);
+        /* Render SVG for commit contributions */
+        let commitsContribSVG = githubStats.commitsContribSVG({
+            rows: 7,
+            space: 4,
+            rectWidth: 16,
+            levelColors: [
+                {
+                    minCommits: 0,
+                    color: '#ebedf0'
+                },
+                {
+                    minCommits: 1,
+                    color: '#c6e48b'
+                },
+                {
+                    minCommits: 9,
+                    color: '#7bc96f'
+                },
+                {
+                    minCommits: 17,
+                    color: '#239a3b'
+                },
+                {
+                    minCommits: 26,
+                    color: '#196127'
+                }
+            ]
+        });
+
+        let githubCommits = document.querySelector(COMMITS_CONTAINER);
+        githubCommits.appendChild(commitsContribSVG);
+
+        /* Render SVG for language contributions */
+        let languageContribSVG = githubStats.languagesContribSVG({
+            barHeight: 20,
+            lineSpacing: 4,
+            languageNameWidth: 100,
+            fontSize: 14
+        });
+
+        let githubLanguageDistribution = document.querySelector(LANGUAGES_CONTAINER);
+        githubLanguageDistribution.appendChild(languageContribSVG);
+    })();
 
     showPane('experiences-pane', false);
 });
