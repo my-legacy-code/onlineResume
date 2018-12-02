@@ -633,6 +633,13 @@ a {
     font-size: 14px;
 }
 
+ul.description, ul.project-implementation {
+    list-style-type: square;
+    margin-top: 10px;
+    padding-left: 14px;
+}
+
+
 .book {
     font-size: 0;
     position: relative;
@@ -645,7 +652,7 @@ a {
 
 #activities-pane > ul > li {
     margin-bottom: 20px;
-    min-height: 80px;
+    min-height: 160px;
 }
 
 .activity-title {
