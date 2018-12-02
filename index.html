@@ -92,30 +92,40 @@
                 <div id="biography-who-i-am">I'm <span class="role">a Full-stack Engineer.</span></div>
                 <div id="biography-skills-container">
                     <div>
-                        I use
+                        I eat
                         <i class="icon-git"></i>
                         <a href="https://git-scm.com">Git</a>,
-                        <i class="icon-docker"></i> <a href="https://www.docker.com">Docker</a>
+                        <i class="icon-docker"></i><a href="https://www.docker.com">Docker</a>
                         and
-                        <a href="https://nginx.org">Webpack</a>.
+                        <i class="icon-nginx"></i>
+                        <a href="https://nginx.org">Nginx</a>.
                     </div>
                     <div>
-                        I love
+                        I drink
                         <i class="icon-reactjs"></i>
                         <a href="https://facebook.github.io/react">React</a>,
                         <i class="icon-angular"></i>
                         <a href="https://angular.io">Angular</a>
                         and
-                        <a href="https://webpack.js.org">Typescript</a>.
+                        <a href="https://webpack.js.org">Webpack</a>.
                     </div>
                     <div>
-                        I hack
+                        I love
                         <i class="icon-spring"></i>
                         <a href="https://spring.io">Spring</a>,
                         <i class="icon-ruby-on-rails"></i>
                         <a href="http://rubyonrails.org">Rails</a>
                         and
                         <a href="https://expressjs.com">Express</a>.
+                    </div>
+                    <div>
+                        I breath
+                        <a href="https://www.typescriptlang.org">TypeScript</a>,
+                        <i class="icon-go"></i>
+                        <a href="https://golang.org">Golang</a>
+                        and
+                        <i class="icon-java"></i>
+                        <a href="https://www.java.com">Java</a>.
                     </div>
                 </div>
                 <ul class="social-media">
@@ -166,11 +176,27 @@
                     <img src="assets/images/companies/udacity.png">
                 </div>
                 <div>
-                    <div><span
-                            class="important">Full-stack Engineer, Udacity</span>,
+                    <div>
+                        <span class="important">Full-stack Developer, Udacity</span>,
                         Mountain View, CA, US
                     </div>
                     <div class="date">JUNE 2018 – PRESENT</div>
+
+                    <ul class="description">
+                        <li>Removed <span class="important">circular dependencies</span> in <span>Angular</span> app to
+                            reduce page refresh time by 90%, significantly improved 8 engineers’ productivity.
+                        </li>
+                        <li>Decoupled UI based on <span class="important">SOLID Agile</span> principles, introduced
+                            <span>unit tests</span> to 4 components, and added <span>error handling</span>,
+                            incrementally refactoring app following <span class="important">Clean Code</span>.
+                        </li>
+                        <li>Designed <span>algorithms & data structures</span> to generate survey questions based on
+                            students’ answers and used <span>stack</span> to navigate through section history.
+                        </li>
+                        <li><span class="important">Dockerized</span> app and configured <span class="important">Circle CI</span>,
+                            reducing CI run time by 11%.
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li class="company-info">
@@ -194,13 +220,18 @@
                                 <a href="https://www.wpi.edu/library" target="_blank">Library Search</a>
                             </div>
                             <div class="project-description">Search component for school library</div>
-                            <div class="project-implementation">
-                                Developed <a>progressive</a> search component in <a>ES6</a>,
-                                fixed <a>XSS</a> vulnerability by validating inputs with <a>regular expression</a> in
-                                <a>PHP</a>,
-                                tracked issues with <a>Gitlab</a> and deployed code to <a>Amazon S3</a>, allowing
-                                students to find books online.
-                            </div>
+                            <ul class="project-implementation">
+                                <li>Developed <span class="important">mobile user experience first</span> search
+                                    component in <span class="important">ES6</span> to assist students in finding the
+                                    campus library resources effectively.
+                                </li>
+                                <li>Prevented <span class="important">Cross-site scripting</span> by blacklisting inputs
+                                    with <span class="important">regular expression</span> in <span class="important">PHP</span>.
+                                </li>
+                                <li>Tracked issues with <span class="important">Gitlab</span> and deployed code to <span
+                                        class="important">Amazon S3</span>.
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -229,15 +260,16 @@
                         Worcester, MA, US
                     </div>
                     <div class="date">SEPTEMBER 2016 – FEBRUARY 2017</div>
-                    <div class="description">
-                        Architected <a>iOS</a> app with <a>MVVM</a>, <a>RxSwift</a>, <a>dependency injection</a>, and
-                        <a>services</a>.
-                        <br/>
-                        <br/>
-                        Mocked <a>RESTful APIs</a> in <a>RAML</a>, built a <a>testing framework</a> for <a>Java
-                        Spring</a>,
-                        developed <a>mini SDK</a> and sped up data queries <a>15 times</a> through optimizing <a>SQL</a>.
-                    </div>
+                    <ul class="description">
+                        <li>Architected <a>iOS</a> app with <a>MVVM</a>, <a>RxSwift</a>, <a>dependency injection</a>,
+                            and <a>services</a>.
+                        </li>
+                        <li>Mocked <a>RESTful APIs</a> in <a>RAML</a>, built a <a>testing framework</a> for <a>Java
+                            Spring</a>,
+                            developed <a>mini SDK</a> and sped up data queries <a>15 times</a> through optimizing
+                            <a>SQL</a>.
+                        </li>
+                    </ul>
                     <ul class="projects">
                         <li class="project first">
                             <a href="assets/documents/assistments.pdf" target="_blank">
@@ -263,16 +295,17 @@
                         Worcester, MA, US
                     </div>
                     <div class="date">AUGUST 2017 – AUGUST 2017</div>
-                    <div class="description">
-                        Introduced high school students core <a>CSS</a> and <a>javascript</a> concepts, such as <a>flex
-                        box</a>, <a>scope</a>,
-                        <a>events handling</a>, <a>JSON</a> parsing, <a>AJAX</a>, <a>DOM manipulation</a> and
-                        <a>CORS</a>.
-                        <br/>
-                        <br/>
-                        Provided student tutorials on building their real-time chat apps with <a>Socket.io</a> and on
-                        sending email using <a>SentGrid</a> API.
-                    </div>
+                    <ul class="description">
+                        <li>Introduced high school students core <a>CSS</a> and <a>javascript</a> concepts, such as <a>flex
+                            box</a>, <a>scope</a>,
+                            <a>events handling</a>, <a>JSON</a> parsing, <a>AJAX</a>, <a>DOM manipulation</a> and
+                            <a>CORS</a>.
+                        </li>
+                        <li>
+                            Provided student tutorials on building their real-time chat apps with <a>Socket.io</a> and
+                            on sending email using <a>SentGrid</a> API.
+                        </li>
+                    </ul>
                 </div>
             </li>
             <li class="company-info">
@@ -282,12 +315,13 @@
                 <div>
                     <div><span class="important">UI Designer, Intern, Concordya Inc.</span>, Beijing, China</div>
                     <div class="date">MAY 2015 – AUGUST 2015</div>
-                    <div class="description">
-                        Designed homepage <a>animations</a>, <a>material UI</a>, <a>icons</a> and <a>logos</a> with <a>Sketch</a>.
-                        <br/>
-                        <br/>
-                        Created <a>interactive prototypes</a> with <a>Framer.js</a>, <a>jQuery</a> and <a>CSS3</a>.
-                    </div>
+                    <ul class="description">
+                        <li>Designed homepage <a>animations</a>, <a>material UI</a>, <a>icons</a> and <a>logos</a> with
+                            <a>Sketch</a>.
+                        </li>
+                        <li>Created <a>interactive prototypes</a> with <a>Framer.js</a>, <a>jQuery</a> and <a>CSS3</a>.
+                        </li>
+                    </ul>
                     <ul class="projects">
                         <li class="project first">
                             <a href="http://byliuyang.github.io/guanplushomepage" target="_blank">
@@ -326,21 +360,19 @@
                 </div>
             </li>
             <li class="project second">
-                <a href="https://github.com/byliuyang/HeroDeploy" target="_blank">
+                <a href="https://github.com/byliuyang/docker-deploy" target="_blank">
                     <div class="project-thumbnail">
-                        <img src="assets/images/screenshots/hero-deploy/1.png">
+                        <img src="assets/images/screenshots/docker-deploy/1.png">
                     </div>
                 </a>
                 <div class="project-title">
-                    <a href="https://github.com/byliuyang/HeroDeploy" target="_blank">HeroDeploy</a>
+                    <a href="https://github.com/byliuyang/docker-deploy" target="_blank">Docker Deploy</a>
                 </div>
                 <div class="project-description">
-                    Automatic deployment git hook for private server
+                    A Web-based Container Manager
                 </div>
                 <div class="project-implementation">
-                    Designed a <a>git hook</a> for <a>Angular</a> and <a>Ruby on Rails</a> projects in <a>Bash
-                    script</a>
-                    and integrated <a>Procfile</a> and <a>systemd</a> services, easing project deployment.
+                    Built <a>Docker</a> container manager and <a>Webhooks</a> in <a>Golang</a> & <a>bash</a>. Developed real-time animated web UI with <a>CSS3</a>.
                 </div>
             </li>
             <li class="project first">
@@ -364,38 +396,18 @@
                 </div>
             </li>
             <li class="project second">
-                <a href="https://cover-main.herokuapp.com/" target="_blank">
+                <a href="https://github.com/byliuyang/github-stats" target="_blank">
                     <div class="project-thumbnail">
-                        <img src="assets/images/screenshots/cover/1.png">
+                        <img src="assets/images/screenshots/github-stats/1.png">
                     </div>
                 </a>
                 <div class="project-title">
-                    <a href="https://cover-main.herokuapp.com/" target="_blank">Cover</a>
-                </div>
-                <div class="project-description">Hints voting system for student</div>
-            </li>
-            <li class="project first">
-                <a href="https://github.com/byliuyang/wehackers-design" target="_blank">
-                    <div class="project-thumbnail">
-                        <img src="assets/images/screenshots/wehackers/1.png">
-                    </div>
-                </a>
-                <div class="project-title">
-                    <a href="https://github.com/byliuyang/wehackers-design" target="_blank">Wehackers</a>
-                </div>
-                <div class="project-description">Link sharing website for developers and designers</div>
-            </li>
-            <li class="project second">
-                <a href="https://github.com/byliuyang/xSmile" target="_blank">
-                    <div class="project-thumbnail">
-                        <img src="assets/images/screenshots/xSmile/1.png">
-                    </div>
-                </a>
-                <div class="project-title">
-                    <a href="https://github.com/byliuyang/xSmile" target="_blank">xSmile</a>
+                    <a href="https://github.com/byliuyang/github-stats" target="_blank">Github Stats</a>
                 </div>
                 <div class="project-description">
-                    Smile detector based on step-wise regression
+                    Github contribution graph generator
+                </div>
+                <div class="project-implementation">
                 </div>
             </li>
         </ul>
@@ -403,6 +415,13 @@
     <li id="activities-pane" class="center active-pane">
         <h1>Activities</h1>
         <ul>
+            <li>
+                <div class="activity-logo">
+                    <img src="assets/images/conferences/gopherconf-2018.png">
+                </div>
+                <div class="activity-title">GopherCon 2018, Colorado Convention Center, Denver</div>
+                <div class="date">AUGUST 27 - AUGUST 30, 2018</div>
+            </li>
             <li>
                 <div class="activity-logo">
                     <img src="assets/images/hackathons/pennapp-xvii.png">
@@ -473,7 +492,7 @@
             </li>
             <li>
                 <div class="activity-logo">
-                    <img src="https://hackmit.org/assets/images/hack-logo/hack_logo_glow.png">
+                    <img src="assets/images/hackathons/hackmit.png">
                 </div>
                 <div class="activity-title">HackMIT, MIT Hackathon</div>
                 <div class="date">SEPTEMBER 16, 2017 - SEPTEMBER 17, 2017</div>
@@ -904,6 +923,46 @@
         <ul class="books">
             <li class="first">
                 <div class="book">
+                    <img src="assets/images/book-covers/clean-architecture.jpg">
+                </div>
+                <div>
+                    <a href="https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164" target="_blank">
+                        Clean Architecture
+                    </a>
+                </div>
+            </li>
+            <li class="second">
+                <div class="book">
+                    <img src="assets/images/book-covers/clean-code.jpg">
+                </div>
+                <div>
+                    <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882" target="_blank">
+                        Clean Code
+                    </a>
+                </div>
+            </li>
+            <li class="third">
+                <div class="book">
+                    <img src="assets/images/book-covers/go-in-action.png">
+                </div>
+                <div>
+                    <a href="https://www.manning.com/books/go-in-action" target="_blank">
+                        Go In Action
+                    </a>
+                </div>
+            </li>
+            <li class="forth">
+                <div class="book">
+                    <img src="assets/images/book-covers/write-an-interpreter-go.png">
+                </div>
+                <div>
+                    <a href="https://interpreterbook.com" target="_blank">
+                        Writing An Interpreter In Go
+                    </a>
+                </div>
+            </li>
+            <li class="first">
+                <div class="book">
                     <img src="assets/images/book-covers/eloquentjavascript.jpg">
                 </div>
                 <div>
@@ -914,31 +973,31 @@
             </li>
             <li class="second">
                 <div class="book">
-                    <img src="https://survivejs.com/8f86c1d07d5536454690030cd1a10b53.png">
+                    <img src="assets/images/book-covers/up-and-going.jpg">
                 </div>
                 <div>
-                    <a href="https://survivejs.com/webpack" target="_blank">
-                        SurviveJs: Webpack
+                    <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">
+                        You Don't Know JS: "Up & Going"
                     </a>
                 </div>
             </li>
             <li class="third">
                 <div class="book">
-                    <img src="https://survivejs.com/b61671d95f81496495f2587a10ddb122.png">
+                    <img src="assets/images/book-covers/scope-and-closure.jpg">
                 </div>
                 <div>
-                    <a href="https://survivejs.com/react" target="_blank">
-                        SurviveJs: React
+                    <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">
+                        You Don't Know JS: "Scope & Closures"
                     </a>
                 </div>
             </li>
             <li class="forth">
                 <div class="book">
-                    <img src="assets/images/book-covers/grid-layout.png">
+                    <img src="assets/images/book-covers/this-object-prototype.jpg">
                 </div>
                 <div>
-                    <a href="https://abookapart.com/products/get-ready-for-css-grid-layout" target="_blank">
-                        Get Ready for CSS Grid Layout
+                    <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">
+                        You Don't Know JS: "this & Object Prototypes"
                     </a>
                 </div>
             </li>
@@ -957,12 +1016,42 @@
                     <img src="assets/images/book-covers/build-your-own-angular-js.png">
                 </div>
                 <div>
-                    <a href="https://teropa.info/build-your-own-angular/" target="_blank">
+                    <a href="https://teropa.info/build-your-own-angular" target="_blank">
                         Build your own AngularJS
                     </a>
                 </div>
             </li>
             <li class="third">
+                <div class="book">
+                    <img src="https://camo.githubusercontent.com/995c301de2f566db10748042a5a67cc5d9ac45d9/687474703a2f2f692e696d6775722e636f6d2f484d47574e4f352e706e67">
+                </div>
+                <div>
+                    <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754" target="_blank">
+                        The introduction to Reactive Programming you've been missing
+                    </a>
+                </div>
+            </li>
+            <li class="forth">
+                <div class="book">
+                    <img src="https://survivejs.com/8f86c1d07d5536454690030cd1a10b53.png">
+                </div>
+                <div>
+                    <a href="https://survivejs.com/webpack" target="_blank">
+                        SurviveJs: Webpack
+                    </a>
+                </div>
+            </li>
+            <li class="first">
+                <div class="book">
+                    <img src="https://survivejs.com/b61671d95f81496495f2587a10ddb122.png">
+                </div>
+                <div>
+                    <a href="https://survivejs.com/react" target="_blank">
+                        SurviveJs: React
+                    </a>
+                </div>
+            </li>
+            <li class="second">
                 <div class="book">
                     <img src="assets/images/book-covers/fullstack-react.jpg">
                 </div>
@@ -972,13 +1061,23 @@
                     </a>
                 </div>
             </li>
-            <li class="forth">
+            <li class="third">
                 <div class="book">
-                    <img src="https://camo.githubusercontent.com/995c301de2f566db10748042a5a67cc5d9ac45d9/687474703a2f2f692e696d6775722e636f6d2f484d47574e4f352e706e67">
+                    <img src="assets/images/book-covers/grid-layout.png">
                 </div>
                 <div>
-                    <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754" target="_blank">
-                        The introduction to Reactive Programming you've been missing
+                    <a href="https://abookapart.com/products/get-ready-for-css-grid-layout" target="_blank">
+                        Get Ready for CSS Grid Layout
+                    </a>
+                </div>
+            </li>
+            <li class="forth">
+                <div class="book">
+                    <img src="https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_4th_edition/images/cover-web.png">
+                </div>
+                <div>
+                    <a href="https://www.railstutorial.org/book" target="_blank">
+                        Ruby on Rails Tutorial
                     </a>
                 </div>
             </li>
@@ -995,26 +1094,6 @@
             </li>
             <li class="second">
                 <div class="book">
-                    <img src="https://softcover.s3.amazonaws.com/636/ruby_on_rails_tutorial_4th_edition/images/cover-web.png">
-                </div>
-                <div>
-                    <a href="https://www.railstutorial.org/book" target="_blank">
-                        Ruby on Rails Tutorial
-                    </a>
-                </div>
-            </li>
-            <li class="third">
-                <div class="book">
-                    <img src="assets/images/book-covers/you-dont-know-js.jpg">
-                </div>
-                <div>
-                    <a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">
-                        You Don't Know JS
-                    </a>
-                </div>
-            </li>
-            <li class="forth">
-                <div class="book">
                     <img src="assets/images/book-covers/algorithm-princeton.png">
                 </div>
                 <div>
@@ -1023,7 +1102,7 @@
                     </a>
                 </div>
             </li>
-            <li class="first">
+            <li class="third">
                 <div class="book">
                     <img src="assets/images/book-covers/programming-languages-application.jpg">
                 </div>
@@ -1033,7 +1112,7 @@
                     </a>
                 </div>
             </li>
-            <li class="second">
+            <li class="forth">
                 <div class="book">
                     <img src="assets/images/book-covers/modern-compiler.png">
                 </div>
@@ -1044,7 +1123,7 @@
                     </a>
                 </div>
             </li>
-            <li class="third">
+            <li class="first">
                 <div class="book">
                     <img src="assets/images/book-covers/csapp.jpg">
                 </div>
@@ -1061,7 +1140,7 @@
     <ul>
         <li id="contact-pane">
             <ul>
-                <li>Worcester, MA 01609</li>
+                <li>Mountain View, CA 94043</li>
                 <li>(508) 373-3494</li>
                 <li>
                     <a href="mailto:byliuyang11@gmail.com">
