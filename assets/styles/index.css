@@ -363,7 +363,7 @@ header nav ul li.active {
     color: white;
     margin-bottom: 50px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    background: url("../images/bg.jpg") center;
+    background: #000000 url("../images/bg.jpg") center;
     background-size: cover;
 }
 
