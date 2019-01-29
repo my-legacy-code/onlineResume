@@ -89,7 +89,6 @@ window.addEventListener('load', async () => {
     (async () => {
         const GITHUB_USERNAME = 'byliuyang';
         const COMMITS_CONTAINER = '#github-contributions';
-        const LANGUAGES_CONTAINER = '#github-language-distribution';
 
         const githubStats = await GithubStats(GITHUB_USERNAME);
 
@@ -123,17 +122,6 @@ window.addEventListener('load', async () => {
             ]
         });
         githubCommits.appendChild(commitsContribSVG);
-
-        let githubLanguageDistribution = document.querySelector(LANGUAGES_CONTAINER);
-        /* Render SVG for language contributions */
-        let languageContribSVG = githubStats.languagesContribSVG({
-            barHeight: 20,
-            barWidth: githubLanguageDistribution.offsetWidth,
-            lineSpacing: 4,
-            languageNameWidth: 100,
-            fontSize: 14
-        });
-        githubLanguageDistribution.appendChild(languageContribSVG);
     })();
 
     showPane('experiences-pane', false);
