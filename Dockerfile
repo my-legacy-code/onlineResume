@@ -1,3 +1,4 @@
 FROM nginx
-VOLUME /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
 EXPOSE 80
+COPY . .
