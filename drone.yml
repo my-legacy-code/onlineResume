@@ -1,0 +1,94 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: build web ui
+    image: docker
+    commands:
+      - docker build -t time4hacks.com:latest .
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  - name: publish to Docker registry
+    image: docker
+    environment:
+      DOCKERHUB_USERNAME:
+        from_secret: DOCKERHUB_USERNAME
+      DOCKERHUB_PASSWORD:
+        from_secret: DOCKERHUB_PASSWORD
+    commands:
+      - docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+      - docker tag short:latest $DOCKERHUB_USERNAME/time4hacks.com:latest
+      - docker push $DOCKERHUB_USERNAME/time4hacks.com:latest
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  - name: upload docker-compose.yml
+    image: appleboy/drone-scp
+    settings:
+      host:
+        from_secret: SERVER_HOST
+      username:
+        from_secret: SERVER_USER
+      password:
+        from_secret: SERVER_PASSWORD
+      port: 22
+      command_timeout: 2m
+      target:
+        from_secret: DEST_DIR
+      source:
+        - docker-compose.yml
+    when:
+      branch:
+        - production
+      event:
+        - push
+
+  - name: deploy service
+    image: appleboy/drone-ssh
+    environment:
+      DOCKERHUB_USERNAME:
+        from_secret: DOCKERHUB_USERNAME
+      DEST_DIR:
+        from_secret: DEST_DIR
+      WEB_PORT:
+        from_secret: WEB_PORT
+    settings:
+      host:
+        from_secret: SERVER_HOST
+      username:
+        from_secret: SERVER_USER
+      password:
+        from_secret: SERVER_PASSWORD
+      port: 22
+      envs:
+        - DOCKERHUB_USERNAME
+        - DEST_DIR
+        - WEB_PORT
+      script:
+        - docker pull $DOCKERHUB_USERNAME/time4hacks.com
+        - cd $DEST_DIR;
+          DOCKERHUB_USERNAME=$DOCKERHUB_USERNAME
+          WEB_PORT=$WEB_PORT
+          docker-compose up -d
+    when:
+      branch:
+        - production
+      event:
+        - push
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
