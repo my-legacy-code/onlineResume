@@ -24,7 +24,7 @@ steps:
         from_secret: DOCKERHUB_PASSWORD
     commands:
       - docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
-      - docker tag short:latest $DOCKERHUB_USERNAME/time4hacks.com:latest
+      - docker tag time4hacks.com:latest $DOCKERHUB_USERNAME/time4hacks.com:latest
       - docker push $DOCKERHUB_USERNAME/time4hacks.com:latest
     volumes:
       - name: docker
