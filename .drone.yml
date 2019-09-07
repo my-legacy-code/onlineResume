@@ -78,7 +78,7 @@ steps:
         - DEST_DIR
         - WEB_PORT
       script:
-        - docker pull $DOCKERHUB_USERNAME/time4hacks.com
+        - docker pull $DOCKERHUB_USERNAME/time4hacks.com:latest
         - cd $DEST_DIR;
           DOCKERHUB_USERNAME=$DOCKERHUB_USERNAME
           WEB_PORT=$WEB_PORT

@@ -1,2 +1,5 @@
+# Jetbrains IDEs
 .idea
 .DS_Store
+
+.env
